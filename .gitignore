@@ -7,3 +7,7 @@ app/[Cc]onfig/database.php
 !empty
 
 .idea
+
+src/data/cache/*
+src/data/tplcache/*
+src/data/sessions/*
