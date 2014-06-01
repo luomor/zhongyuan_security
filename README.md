@@ -20,4 +20,5 @@ macox:
 增加内容
 
 222.126.242.105 www.zhongyuan-security.com
+222.126.242.105 www.zhongyuan-security.tom
 
