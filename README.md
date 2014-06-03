@@ -23,7 +23,11 @@ macox:
 
 222.126.242.105 www.zhongyuan-security.tom
 
+222.126.242.105 www.zhongguohaogongsi.com
+
 http://www.zhongyuan-security.com:8080/
 
 222.126.242.105
+
+www.zhongguohaogongsi.com
 
