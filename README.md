@@ -31,3 +31,9 @@ http://www.zhongyuan-security.com:8080/
 
 www.zhongguohaogongsi.com
 
+参考网站
+
+雪球网 http://xueqiu.com/
+
+福汇 fxcm http://www.fxcm-chinese.com/
+
