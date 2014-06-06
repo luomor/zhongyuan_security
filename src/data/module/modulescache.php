@@ -1,6 +1,7 @@
 <?php
 global $allmodules;
 $GLOBALS['allmodules']['606c658db048ea7328ffe1c7ae2a732f']='606c658db048ea7328ffe1c7ae2a732f.xml';
+$GLOBALS['allmodules']['8a4773468b800900dcfefbc5988833ed']='8a4773468b800900dcfefbc5988833ed.xml';
 $GLOBALS['allmodules']['1f35620fb42d452fa2bdc1dee1690f92']='1f35620fb42d452fa2bdc1dee1690f92.xml';
 $GLOBALS['allmodules']['572606600345b1a4bb8c810bbae434cc']='572606600345b1a4bb8c810bbae434cc.xml';
 $GLOBALS['allmodules']['0cce60bc0238aa03804682c801584991']='0cce60bc0238aa03804682c801584991.xml';
