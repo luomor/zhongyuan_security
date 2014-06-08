@@ -7,3 +7,5 @@ drop database zhongyuan_security;
 
 select * from zhongyuan_sysconfig;
 select * from zhongyuan_sysconfig where value like '%dede%';
+
+select * from zhongyuan_sysconfig;
