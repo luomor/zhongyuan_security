@@ -358,7 +358,7 @@ define('UC_DBCHARSET', 'utf8');
 define('UC_DBTABLEPRE', '`zhongyuan_bbs`.zhongyuan_ucenter_');
 define('UC_DBCONNECT', '0');
 define('UC_KEY', 'zhongyuan123');
-define('UC_API', 'http://bbs.zhongyuan-security.tom/uc_server');
+define('UC_API', 'http://bbs.zhongguohaogongsi.com:8080/uc_server');
 define('UC_CHARSET', 'utf-8');
 define('UC_IP', '127.0.0.1');
 define('UC_APPID', '2');

@@ -42,7 +42,7 @@ define('UC_DBCHARSET', 'utf8'); // UCenter ��ݿ��ַ�
 define('UC_DBTABLEPRE', '`zhongyuan_bbs`.zhongyuan_ucenter_'); // UCenter ��ݿ��ǰ׺
 define('UC_DBCONNECT', '0'); // UCenter ��ݿ�־����� 0=�ر�, 1=��
 define('UC_KEY', '70I9a7rb178aTaE386te91717bYb1aDcEfVbJ70aN2edJ4y7q1xfm7N50bo6cexf'); // �� UCenter ��ͨ����Կ, Ҫ�� UCenter ����һ��
-define('UC_API', 'http://bbs.zhongyuan-security.tom/uc_server'); // UCenter �� URL ��ַ, �ڵ���ͷ��ʱ�����˳���
+define('UC_API', 'http://bbs.zhongguohaogongsi.com:8080/uc_server'); // UCenter �� URL ��ַ, �ڵ���ͷ��ʱ�����˳���
 define('UC_CHARSET', 'utf-8'); // UCenter ���ַ�
 define('UC_IP', '127.0.0.1'); // UCenter �� IP, �� UC_CONNECT Ϊ�� mysql ��ʽʱ, ���ҵ�ǰӦ�÷�������������������ʱ, �����ô�ֵ
 define('UC_APPID', '3'); // ��ǰӦ�õ� ID
