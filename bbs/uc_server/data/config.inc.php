@@ -1,7 +1,7 @@
 <?php 
 define('UC_DBHOST', 'localhost');
-define('UC_DBUSER', 'root');
-define('UC_DBPW', 'root');
+define('UC_DBUSER', 'zhongyuan');
+define('UC_DBPW', 'zhongyuan123');
 define('UC_DBNAME', 'zhongyuan_bbs');
 define('UC_DBCHARSET', 'utf8');
 define('UC_DBTABLEPRE', 'zhongyuan_ucenter_');

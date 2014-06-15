@@ -5,8 +5,8 @@ $_config = array();
 
 // ----------------------------  CONFIG DB  ----------------------------- //
 $_config['db']['1']['dbhost'] = 'localhost';
-$_config['db']['1']['dbuser'] = 'root';
-$_config['db']['1']['dbpw'] = 'root';
+$_config['db']['1']['dbuser'] = 'zhongyuan';
+$_config['db']['1']['dbpw'] = 'zhongyuan123';
 $_config['db']['1']['dbcharset'] = 'utf8';
 $_config['db']['1']['pconnect'] = '0';
 $_config['db']['1']['dbname'] = 'zhongyuan_bbs';

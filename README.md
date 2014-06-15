@@ -105,6 +105,10 @@ sudo chown -R www-data ucenter
 sudo chmod -R 775 src
 sudo chmod -R 775 bbs
 sudo chmod -R 775 sns
+
+sudo chgrp -R zhang src
+sudo chgrp -R zhang bbs
+sudo chgrp -R zhang sns
 </pre>
 
 ###### centos
@@ -117,4 +121,8 @@ sudo chown -R apache ucenter
 sudo chmod -R 775 src
 sudo chmod -R 775 bbs
 sudo chmod -R 775 sns
+
+sudo chgrp -R didiwuliu src
+sudo chgrp -R didiwuliu bbs
+sudo chgrp -R didiwuliu sns
 </pre>
