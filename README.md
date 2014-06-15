@@ -3,21 +3,21 @@ zhongyuan_security
 
 zhongyuan security
 
-h3. 修改hosts文件
+## 修改hosts文件
 
-h4. windows:
+### windows:
 
 c:\windows\system32\drivers\etc\hosts
 
-h4. linux:
+### linux:
 
 /etc/hosts
 
-h4. macox:
+### macox:
 
 /etc/hosts
 
-h4. 增加内容
+### 增加内容
 
 <pre>
 222.126.242.105 www.zhongyuan-security.com
@@ -51,36 +51,48 @@ www.net.cn
 
 密码 lituo521
 
-h3. www.zhongguohaogongsi.com:8080/zhongyuan
-h4. admin
-h4. zhongyuan123
-h4. 系统邮箱 system@zhongguohaogongsi.com
-h4. 管理员邮箱 admin@zhongguohaogongsi.com
+###### www.zhongguohaogongsi.com:8080/zhongyuan
+<pre>
+admin
+zhongyuan123
+系统邮箱 system@zhongguohaogongsi.com
+管理员邮箱 admin@zhongguohaogongsi.com
+</pre>
 
-h3. www.zhongguohaogongsi.com:8080/zhongyuan
-h4. admin
-h4. zhongyuan123
-h4. 系统邮箱 system@zhongguohaogongsi.com
-h4. 管理员邮箱 admin@zhongguohaogongsi.com
+###### www.zhongguohaogongsi.com:8080/zhongyuan
+<pre>
+admin
+zhongyuan123
+系统邮箱 system@zhongguohaogongsi.com
+管理员邮箱 admin@zhongguohaogongsi.com
+</pre>
 
-h3. mysql
-h4. 用户名 root
-h4. 密码 root
+###### mysql
+<pre>
+用户名 root
+密码 root
+</pre>
 
-h3. database
-h4. zhongyuan_security
-h4. zhongyuan_bbs(ucenter)
-h4. zhongyuan_sns
-h4. zhongyuan_ucenter
+###### database
+<pre>
+zhongyuan_security
+zhongyuan_bbs(ucenter)
+zhongyuan_sns
+zhongyuan_ucenter
+</pre>
 
-h3. ubuntu
-h4. sudo chown -R www-data src
-h4. sudo chown -R www-data bbs
-h4. sudo chown -R www-data sns
-h4. sudo chown -R www-data ucenter
+###### ubuntu
+<pre>
+sudo chown -R www-data src
+sudo chown -R www-data bbs
+sudo chown -R www-data sns
+sudo chown -R www-data ucenter
+</pre>
 
-h3. centos
-h4. sudo chown -R apache src
-h4. sudo chown -R apache bbs
-h4. sudo chown -R apache sns
-h4. sudo chown -R apache ucenter
+###### centos
+<pre>
+sudo chown -R apache src
+sudo chown -R apache bbs
+sudo chown -R apache sns
+sudo chown -R apache ucenter
+</pre>
