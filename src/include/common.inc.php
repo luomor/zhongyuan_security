@@ -360,7 +360,7 @@ define('UC_DBCONNECT', '0');
 define('UC_KEY', 'zhongyuan123');
 define('UC_API', 'http://bbs.zhongguohaogongsi.com:8080/uc_server');
 define('UC_CHARSET', 'utf-8');
-define('UC_IP', '127.0.0.1');
+define('UC_IP', '');
 define('UC_APPID', '2');
 define('UC_PPP', '20');
 ?>
