@@ -5,12 +5,12 @@ FILE="$DATEBASE$DATE.sql"
 
 mysql -uroot -proot $DATEBASE < $FILE
 
-DATEBASE="zhongyuan_bbs"
-FILE="$DATEBASE$DATE.sql"
+#DATEBASE="zhongyuan_bbs"
+#FILE="$DATEBASE$DATE.sql"
 
-mysql -uroot -proot $DATEBASE < $FILE
+#mysql -uroot -proot $DATEBASE < $FILE
 
-DATEBASE="zhongyuan_sns"
-FILE="$DATEBASE$DATE.sql"
+#DATEBASE="zhongyuan_sns"
+#FILE="$DATEBASE$DATE.sql"
 
-mysql -uroot -proot $DATEBASE < $FILE
+#mysql -uroot -proot $DATEBASE < $FILE
