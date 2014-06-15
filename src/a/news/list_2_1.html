@@ -36,6 +36,30 @@
         <div class="row">
             <div class="12u">
                 <header id="header">
+                    <div class="login">
+                        <div id="_userlogin">
+                            <div class="userlogin">
+                                <form name="userlogin" action="/member/index_do.php" method="POST">
+                                    <input type="hidden" name="fmdo" value="login" />
+                                    <input type="hidden" name="dopost" value="login" />
+                                    <input type="hidden" name="keeptime" value="604800" />
+                                    <!--<div class="fb"><span>用户名:</span>
+                                        <input type="text" name="userid" size="20" class="ipt-txt" />
+                                    </div>
+                                    <div class="fb"><span>密码:</span>
+                                        <input type="password" name="pwd" size="20" class="ipt-txt" />
+                                    </div>
+                                    -->
+                                    <div class="submit">
+                                        <!--<button type="submit" class="btn-1">登录</button>-->
+                                        <a href="/member/index.php" >登录</a>
+                                        <a href="/member/index_do.php?fmdo=user&dopost=regnew" >注册帐号</a> <a href="/member/resetpassword.php">忘记密码?</a> </div>
+                                </form>
+                            </div>
+                        </div>
+                        <a href="http://bbs.zhongguohaogongsi.com:8080">论坛</a>
+                        <a href="http://sns.zhongguohaogongsi.com:8080">个人空间</a>
+                    </div>
                     <h1><a href="/" id="logo">主页</a></h1>
                     <nav id="nav">
                         <!--<a href="index.html" class="current-page-item">Homepage</a>
@@ -86,7 +110,7 @@
                                     <div class="list_item_bottom">
                                         <ul class="item_rib">
                                             <li class="item_reply">
-                                                点击：107
+                                                点击：112
                                             </li>
                                         </ul>
                                         <div class="item_time_source">

@@ -1,7 +1,7 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://www.zhongyuan-security.tom';
+$cfg_basehost = 'http://www.zhongguohaogongsi.com';
 $cfg_cmspath = '';
 $cfg_cookie_encode = 'Sk6SeSxPGRPyEDRQgOO7QipGqPA4cl3';
 $cfg_indexurl = '/';
@@ -41,7 +41,7 @@ $cfg_ftp_root = '/';
 $cfg_ftp_mkdir = 'N';
 $cfg_feedback_ck = 'Y';
 $cfg_list_son = 'Y';
-$cfg_mb_open = 'N';
+$cfg_mb_open = 'Y';
 $cfg_mb_album = 'Y';
 $cfg_mb_upload = 'Y';
 $cfg_mb_upload_size = 1024;

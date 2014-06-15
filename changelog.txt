@@ -27,6 +27,7 @@
 1.新功能：增加bbs,sns,ucenter功能
 2.新功能：增加bbs配置，dedecms连接ucenter
 3.新功能：增加sns配置
+4.新功能：增加登录功能
 
 --备注分类
 1、新功能：
