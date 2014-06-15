@@ -57,6 +57,7 @@ admin
 zhongyuan123
 系统邮箱 system@zhongguohaogongsi.com
 管理员邮箱 admin@zhongguohaogongsi.com
+ucenter http://bbs.zhongyuan-security.tom/uc_server
 </pre>
 
 ###### www.zhongguohaogongsi.com:8080/zhongyuan

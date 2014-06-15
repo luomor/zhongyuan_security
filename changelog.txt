@@ -25,6 +25,7 @@
 
 [zhongyuan_security_1.0.0.1 2014-06-15 张春生]
 1.新功能：增加bbs,sns,ucenter功能
+2.新功能：增加bbs配置，dedecms连接ucenter
 
 --备注分类
 1、新功能：
