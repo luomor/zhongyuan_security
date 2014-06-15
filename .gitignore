@@ -21,3 +21,7 @@ sns/data/*
 
 bbs/config/*
 sns/config.php
+
+src/include/common.inc.php
+bbs/uc_client/*
+bbs/uc_server/*
