@@ -349,4 +349,19 @@ if(file_exists(DEDEDATA.'/helper.inc.php'))
     // 初始化小助手
     helper($cfg_helper_autoload);
 }
+
+define('UC_CONNECT', 'mysql');
+define('UC_DBHOST', 'localhost');
+define('UC_DBUSER', 'zhongyuan');
+define('UC_DBPW', 'zhongyuan123');
+define('UC_DBNAME', 'zhongyuan_bbs');
+define('UC_DBCHARSET', 'utf8');
+define('UC_DBTABLEPRE', '`zhongyuan_bbs`.zhongyuan_ucenter_');
+define('UC_DBCONNECT', '0');
+define('UC_KEY', 'P6F8raqavdVe42O4r7DcVbf6K2AcD708afFdbfC353C0J2H3cbJ2U6AaLcV9xaAf');
+define('UC_API', 'http://bbs.zhongguohaogongsi.com:8080/uc_server');
+define('UC_CHARSET', 'utf-8');
+define('UC_IP', '127.0.0.1');
+define('UC_APPID', '3');
+define('UC_PPP', '20');
 ?>
