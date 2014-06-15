@@ -114,7 +114,7 @@ sudo chgrp -R zhang bbs
 sudo chgrp -R zhang sns
 </pre>
 
-k###### centos
+###### centos
 <pre>
 sudo chown -R apache src
 sudo chown -R apache bbs
