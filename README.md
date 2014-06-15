@@ -101,6 +101,10 @@ sudo chown -R www-data src
 sudo chown -R www-data bbs
 sudo chown -R www-data sns
 sudo chown -R www-data ucenter
+
+sudo chmod -R 775 src
+sudo chmod -R 775 bbs
+sudo chmod -R 775 sns
 </pre>
 
 ###### centos
@@ -109,4 +113,8 @@ sudo chown -R apache src
 sudo chown -R apache bbs
 sudo chown -R apache sns
 sudo chown -R apache ucenter
+
+sudo chmod -R 775 src
+sudo chmod -R 775 bbs
+sudo chmod -R 775 sns
 </pre>
