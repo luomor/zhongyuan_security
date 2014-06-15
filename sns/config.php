@@ -11,8 +11,8 @@ $_SC['dbuser']  		= 'root'; //用户
 $_SC['dbpw'] 	 		= 'root'; //密码
 $_SC['dbcharset'] 		= 'utf8'; //字符集
 $_SC['pconnect'] 		= 0; //是否持续连接
-$_SC['dbname']  		= 'uchome'; //数据库
-$_SC['tablepre'] 		= 'uchome_'; //表名前缀
+$_SC['dbname']  		= 'zhongyuan_sns'; //数据库
+$_SC['tablepre'] 		= 'zhongyuan_'; //表名前缀
 $_SC['charset'] 		= 'utf-8'; //页面字符集
 
 $_SC['gzipcompress'] 	= 0; //启用gzip
@@ -37,15 +37,15 @@ define('UC_CONNECT', 'mysql'); // 连接 UCenter 的方式: mysql/NULL, 默认为空时为 
 define('UC_DBHOST', 'localhost'); // UCenter 数据库主机
 define('UC_DBUSER', 'root'); // UCenter 数据库用户名
 define('UC_DBPW', 'root'); // UCenter 数据库密码
-define('UC_DBNAME', 'ucenter'); // UCenter 数据库名称
+define('UC_DBNAME', 'zhongyuan_bbs'); // UCenter 数据库名称
 define('UC_DBCHARSET', 'utf8'); // UCenter 数据库字符集
-define('UC_DBTABLEPRE', 'uc_'); // UCenter 数据库表前缀
+define('UC_DBTABLEPRE', '`zhongyuan_bbs`.zhongyuan_ucenter_'); // UCenter 数据库表前缀
 define('UC_DBCONNECT', '0'); // UCenter 数据库持久连接 0=关闭, 1=打开
-define('UC_KEY', '1234567890'); // 与 UCenter 的通信密钥, 要与 UCenter 保持一致
-define('UC_API', 'http://localhost/uc_server'); // UCenter 的 URL 地址, 在调用头像时依赖此常量
-define('UC_CHARSET', 'gbk'); // UCenter 的字符集
-define('UC_IP', ''); // UCenter 的 IP, 当 UC_CONNECT 为非 mysql 方式时, 并且当前应用服务器解析域名有问题时, 请设置此值
-define('UC_APPID', '1'); // 当前应用的 ID
+define('UC_KEY', '70I9a7rb178aTaE386te91717bYb1aDcEfVbJ70aN2edJ4y7q1xfm7N50bo6cexf'); // 与 UCenter 的通信密钥, 要与 UCenter 保持一致
+define('UC_API', 'http://bbs.zhongyuan-security.tom/uc_server'); // UCenter 的 URL 地址, 在调用头像时依赖此常量
+define('UC_CHARSET', 'utf-8'); // UCenter 的字符集
+define('UC_IP', '127.0.0.1'); // UCenter 的 IP, 当 UC_CONNECT 为非 mysql 方式时, 并且当前应用服务器解析域名有问题时, 请设置此值
+define('UC_APPID', '3'); // 当前应用的 ID
 define('UC_PPP', 20);
 
 ?>

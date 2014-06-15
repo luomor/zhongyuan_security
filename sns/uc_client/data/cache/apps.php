@@ -6,7 +6,6 @@ $_CACHE['apps'] = array (
     'type' => 'DISCUZX',
     'name' => '中国好公司bbs',
     'url' => 'http://bbs.zhongyuan-security.tom',
-    'authkey' => 'VcF8709aFfSe6dpf06G9Ubo277k1Gd95V1S9y7Bfx159XeXep2y2E4q4w5UeWbj8',
     'ip' => '',
     'viewprourl' => '',
     'apifilename' => 'uc.php',
@@ -14,13 +13,7 @@ $_CACHE['apps'] = array (
     'dbcharset' => '',
     'synlogin' => '1',
     'recvnote' => '1',
-    'extra' => 
-    array (
-      'apppath' => '',
-      'extraurl' => 
-      array (
-      ),
-    ),
+    'extra' => false,
     'tagtemplates' => '<?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="template"><![CDATA[]]></item>
@@ -33,7 +26,6 @@ $_CACHE['apps'] = array (
     'type' => 'OTHER',
     'name' => '中国好公司',
     'url' => 'http://www.zhongyuan-security.tom',
-    'authkey' => 'o8V8t6a1D4E2J6fb18q1gbA24dY1Qev3Y232l1g2m5Lce4H2V5h9JdP3zfddL8R0',
     'ip' => '',
     'viewprourl' => '',
     'apifilename' => 'uc.php',
@@ -41,7 +33,7 @@ $_CACHE['apps'] = array (
     'dbcharset' => 'gbk',
     'synlogin' => '1',
     'recvnote' => '1',
-    'extra' => '',
+    'extra' => false,
     'tagtemplates' => '<?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="template"><![CDATA[<a href="{url}" target="_blank">{title}</a>]]></item>
@@ -60,7 +52,6 @@ $_CACHE['apps'] = array (
     'type' => 'UCHOME',
     'name' => '个人家园',
     'url' => 'http://sns.zhongyuan-security.tom',
-    'authkey' => '70I9a7rb178aTaE386te91717bYb1aDcEfVbJ70aN2edJ4y7q1xfm7N50bo6cexf',
     'ip' => '',
     'viewprourl' => '',
     'apifilename' => 'uc.php',
@@ -68,7 +59,7 @@ $_CACHE['apps'] = array (
     'dbcharset' => 'utf8',
     'synlogin' => '1',
     'recvnote' => '1',
-    'extra' => '',
+    'extra' => false,
     'tagtemplates' => '<?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="template"><![CDATA[<a href="{url}" target="_blank">{subject}</a>]]></item>
