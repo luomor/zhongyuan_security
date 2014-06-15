@@ -29,6 +29,11 @@ c:\windows\system32\drivers\etc\hosts
 222.126.242.105 bbs.zhongguohaogongsi.com
 222.126.242.105 sns.zhongguohaogongsi.com
 222.126.242.105 ucenter.zhongguohaogongsi.com
+
+127.0.0.1 www.zhongguohaogongsi.com
+127.0.0.1 bbs.zhongguohaogongsi.com
+127.0.0.1 sns.zhongguohaogongsi.com
+127.0.0.1 ucenter.zhongguohaogongsi.com
 </pre>
 
 http://www.zhongyuan-security.com:8080/
