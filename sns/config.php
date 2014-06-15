@@ -47,5 +47,3 @@ define('UC_CHARSET', 'utf-8'); // UCenter ���ַ�
 define('UC_IP', '127.0.0.1'); // UCenter �� IP, �� UC_CONNECT Ϊ�� mysql ��ʽʱ, ���ҵ�ǰӦ�÷�������������������ʱ, �����ô�ֵ
 define('UC_APPID', '3'); // ��ǰӦ�õ� ID
 define('UC_PPP', 20);
-
-?>
