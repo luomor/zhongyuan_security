@@ -23,7 +23,19 @@ macox:
 
 222.126.242.105 www.zhongyuan-security.tom
 
+222.126.242.105 bbs.zhongyuan-security.tom
+
+222.126.242.105 sns.zhongyuan-security.tom
+
+222.126.242.105 ucenter.zhongyuan-security.tom
+
 222.126.242.105 www.zhongguohaogongsi.com
+
+222.126.242.105 bbs.zhongguohaogongsi.com
+
+222.126.242.105 sns.zhongguohaogongsi.com
+
+222.126.242.105 ucenter.zhongguohaogongsi.com
 
 http://www.zhongyuan-security.com:8080/
 
@@ -36,6 +48,8 @@ www.zhongguohaogongsi.com
 雪球网 http://xueqiu.com/
 
 福汇 fxcm http://www.fxcm-chinese.com/
+
+金融界
 
 www.net.cn
 
