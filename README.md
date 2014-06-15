@@ -79,6 +79,12 @@ zhongyuan123
 <pre>
 用户名 root
 密码 root
+zhongyuan
+zhongyuan123
+
+create database zhongyuan_security character set utf8 collate utf8_general_ci;
+GRANT ALL ON `zhongyuan_security`.* TO `zhongyuan`@localhost IDENTIFIED BY 'zhongyuan123';
+FLUSH PRIVILEGES;
 </pre>
 
 ###### database
