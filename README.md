@@ -129,3 +129,8 @@ sudo chgrp -R didiwuliu src
 sudo chgrp -R didiwuliu bbs
 sudo chgrp -R didiwuliu sns
 </pre>
+
+<pre>
+git rm -r src/a --cached
+git rm -r src/data --cached
+</pre>
