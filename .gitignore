@@ -12,12 +12,3 @@ app/[Cc]onfig/database.php
 src/data/cache/*
 src/data/tplcache/*
 src/data/sessions/*
-
-src/a/*
-
-src/data/*
-bbs/data/*
-sns/data/*
-
-bbs/config/*
-sns/config.php
