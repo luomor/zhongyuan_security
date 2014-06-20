@@ -20,11 +20,6 @@ c:\windows\system32\drivers\etc\hosts
 ### 增加内容
 
 <pre>
-222.126.242.105 www.zhongyuan-security.com
-222.126.242.105 www.zhongyuan-security.tom
-222.126.242.105 bbs.zhongyuan-security.tom
-222.126.242.105 sns.zhongyuan-security.tom
-222.126.242.105 ucenter.zhongyuan-security.tom
 222.126.242.105 www.zhongguohaogongsi.com
 222.126.242.105 bbs.zhongguohaogongsi.com
 222.126.242.105 sns.zhongguohaogongsi.com
@@ -35,8 +30,6 @@ c:\windows\system32\drivers\etc\hosts
 127.0.0.1 sns.zhongguohaogongsi.com
 127.0.0.1 ucenter.zhongguohaogongsi.com
 </pre>
-
-http://www.zhongyuan-security.com:8080/
 
 222.126.242.105
 
@@ -58,6 +51,7 @@ www.net.cn
 
 ###### 网站信息
 <pre>
+test
 www.zhongguohaogongsi.com:8080/zhongyuan
 admin
 zhongyuan123
@@ -69,10 +63,10 @@ ucenter http://bbs.zhongguohaogongsi.com:8080/uc_server
 http://sns.zhongguohaogongsi.com:8080/admincp.php
 http://sns.zhongguohaogongsi.com:8080/space.php
 
-dedecms http://www.zhongyuan-security.tom/zhongyuan/
-ucenter http://bbs.zhongyuan-security.tom/uc_server
-http://sns.zhongyuan-security.tom/admincp.php
-http://sns.zhongyuan-security.tom/space.php
+dedecms http://www.zhongguohaogongsi.com/zhongyuan/
+ucenter http://bbs.zhongguohaogongsi.com/uc_server
+http://sns.zhongguohaogongsi.com/admincp.php
+http://sns.zhongguohaogongsi.com/space.php
 </pre>
 
 ###### www.zhongguohaogongsi.com:8080/zhongyuan
