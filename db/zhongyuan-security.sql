@@ -31,6 +31,8 @@ select * from zhongyuan_bbs.zhongyuan_common_member;
 select * from zhongyuan_bbs.zhongyuan_ucenter_members;
 select * from zhongyuan_sns.zhongyuan_member;
 
+select * from zhongyuan_sns.zhongyuan_userapp;
+
 delete from zhongyuan_security.zhongyuan_member where mid=2;
 
 show create table zhongyuan_security.zhongyuan_member;

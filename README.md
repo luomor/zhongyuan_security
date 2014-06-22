@@ -152,4 +152,8 @@ $_config['cookie']['cookiedomain'] = '.zhongguohaogongsi.com';
 sns
 config.php
 $_SC['cookiedomain'] 	= '.zhongguohaogongsi.com';
+
+ucenter
+config.inc.php
+define('UC_COOKIEDOMAIN', '.zhongguohaogongsi.com');
 </pre>
