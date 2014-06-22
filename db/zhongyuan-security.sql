@@ -25,6 +25,7 @@ drop database zhongyuan_sns;
 select * from zhongyuan_security.zhongyuan_sys_module;
 
 -- 2014-06-22
+-- ucenter 包含所有用户，各自应用有各自用户
 select * from zhongyuan_security.zhongyuan_member;
 select * from zhongyuan_bbs.zhongyuan_common_member;
 select * from zhongyuan_bbs.zhongyuan_ucenter_members;

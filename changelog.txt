@@ -37,6 +37,9 @@
 [zhongyuan_security_1.0.0.1 2014-06-20 张春生]
 1.新功能：调整域名
 
+[zhongyuan_security_1.0.0.1 2014-06-20 张春生]
+1.新功能：调整cookie作用域为.zhongguohaogongsi.com
+
 --备注分类
 1、新功能：
 2、Bug:
