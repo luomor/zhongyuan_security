@@ -23,3 +23,14 @@ drop database zhongyuan_bbs;
 drop database zhongyuan_sns;
 
 select * from zhongyuan_security.zhongyuan_sys_module;
+
+-- 2014-06-22
+select * from zhongyuan_security.zhongyuan_member;
+select * from zhongyuan_bbs.zhongyuan_common_member;
+select * from zhongyuan_bbs.zhongyuan_ucenter_members;
+select * from zhongyuan_sns.zhongyuan_member;
+
+delete from zhongyuan_security.zhongyuan_member where mid=2;
+
+show create table zhongyuan_security.zhongyuan_member;
+alter table zhongyuan_security.zhongyuan_member AUTO_INCREMENT=2;
