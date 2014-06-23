@@ -146,7 +146,7 @@ cookie加密码: Sk6SeSxPGRPyEDRQgOO7QipGqPA4cl3
 跨域共享cookie的域名: .zhongguohaogongsi.com
 
 bbs
-config_global.php
+config/config_global.php
 $_config['cookie']['cookiedomain'] = '.zhongguohaogongsi.com';
 
 sns
