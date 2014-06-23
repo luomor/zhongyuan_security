@@ -91,6 +91,11 @@ GRANT ALL ON `zhongyuan_security`.* TO `zhongyuan`@localhost IDENTIFIED BY 'zhon
 FLUSH PRIVILEGES;
 </pre>
 
+###### php
+<pre>
+short_open_tag = On
+</pre>
+
 ###### database
 <pre>
 zhongyuan_security
