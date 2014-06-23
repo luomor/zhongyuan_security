@@ -32,6 +32,10 @@ class base {
 	var $app = array();
 	var $user = array();
 	var $input = array();
+
+    var $db_bbs;
+    var $db_sns;
+
 	function __construct() {
 		$this->base();
 	}
@@ -39,6 +43,8 @@ class base {
 	function base() {
 		$this->init_var();
 		$this->init_db();
+        $this->init_db_bbs();
+        $this->init_db_sns();
 		$this->init_cache();
 		$this->init_note();
 		$this->init_mail();
@@ -73,6 +79,18 @@ class base {
 		$this->db = new db();
 		$this->db->connect(UC_DBHOST, UC_DBUSER, UC_DBPW, '', UC_DBCHARSET, UC_DBCONNECT, UC_DBTABLEPRE);
 	}
+
+    function init_db_bbs() {
+        require_once UC_ROOT.'lib/db.class.php';
+        $this->db_bbs = new db();
+        $this->db_bbs->connect(UC_DBHOST, UC_DBUSER, UC_DBPW, 'zhongyuan_bbs', UC_DBCHARSET, UC_DBCONNECT, '`zhongyuan_bbs`.zhongyuan_');
+    }
+
+    function init_db_sns() {
+        require_once UC_ROOT.'lib/db.class.php';
+        $this->db_sns = new db();
+        $this->db_sns->connect(UC_DBHOST, UC_DBUSER, UC_DBPW, 'zhongyuan_sns', UC_DBCHARSET, UC_DBCONNECT, '`zhongyuan_sns`.zhongyuan_');
+    }
 
 	function load($model, $base = NULL) {
 		$base = $base ? $base : $this;

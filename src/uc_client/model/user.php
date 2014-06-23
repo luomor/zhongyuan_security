@@ -14,6 +14,9 @@ class usermodel {
 	var $db;
 	var $base;
 
+    var $db_bbs;
+    var $db_sns;
+
 	function __construct(&$base) {
 		$this->usermodel($base);
 	}
@@ -21,6 +24,8 @@ class usermodel {
 	function usermodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
+        $this->db_bbs = $base->db_bbs;
+        $this->db_sns = $base->db_sns;
 	}
 
 	function get_user_by_uid($uid) {
@@ -111,8 +116,187 @@ class usermodel {
 		$this->db->query("INSERT INTO ".UC_DBTABLEPRE."members SET $sqladd username='$username', password='$password', email='$email', regip='".$this->base->onlineip."', regdate='".$this->base->time."', salt='$salt'");
 		$uid = $this->db->insert_id();
 		$this->db->query("INSERT INTO ".UC_DBTABLEPRE."memberfields SET uid='$uid'");
+
+        //bbs
+        $this->insertbbs($username, $password, $email, $uid, '', '');
+
+        //sns
+        $this->insertsns($username, $password, $email, $uid, '', '');
 		return $uid;
 	}
+
+    function insertbbs($username, $password, $email, $uid = 0, $questionid = '', $answer = '') {
+        $groupid = 10;
+        $extdata['credits'] = explode(',', "2");
+        $extdata['emailstatus'] = 0;
+        //C::t('common_member')->insert($uid, $username, md5(random(10)), $email, $this->base->onlineip, $groupid, $init_arr);
+
+        $credits = isset($extdata['credits']) ? $extdata['credits'] : array();
+        $profile = isset($extdata['profile']) ? $extdata['profile'] : array();
+        $profile['uid'] = $uid;
+        $base = array(
+            'uid' => $uid,
+            'username' => (string)$username,
+            'password' => (string)$password,
+            'email' => (string)$email,
+            'adminid' => 0,
+            'groupid' => intval($groupid),
+            'regdate' => TIMESTAMP,
+            'emailstatus' => intval($extdata['emailstatus']),
+            'credits' => dintval($credits[0]),
+            'timeoffset' => 9999
+        );
+        $status = array(
+            'uid' => $uid,
+            'regip' => (string)$this->base->onlineip,
+            'lastip' => (string)$this->base->onlineip,
+            'lastvisit' => TIMESTAMP,
+            'lastactivity' => TIMESTAMP,
+            'lastpost' => 0,
+            'lastsendmail' => 0
+        );
+        $count = array(
+            'uid' => $uid,
+            'extcredits1' => dintval($credits[1]),
+            'extcredits2' => dintval($credits[2]),
+            'extcredits3' => dintval($credits[3]),
+            'extcredits4' => dintval($credits[4]),
+            'extcredits5' => dintval($credits[5]),
+            'extcredits6' => dintval($credits[6]),
+            'extcredits7' => dintval($credits[7]),
+            'extcredits8' => dintval($credits[8])
+        );
+        $ext = array('uid' => $uid);
+        $this->insert("common_member", $base, false, true);
+
+        $this->insert("common_member_status", $status, false, true);
+        $this->insert("common_member_count", $count, false, true);
+        $this->insert("common_member_profile", $profile, false, true);
+        $this->insert("common_member_field_forum", $ext, false, true);
+        $this->insert("common_member_field_home", $ext, false, true);
+
+        $data = array(
+            'uid' => $uid,
+            'action' => "add",
+            'dateline' => time()
+        );
+        $this->insert("common_member_log", $data, false, true);
+    }
+
+    public function insert($table, $data, $return_insert_id = false, $replace = false, $silent = false) {
+        $sql = self::implode($data);
+
+        $cmd = $replace ? 'REPLACE INTO' : 'INSERT INTO';
+
+        $table = $this->table($table);
+        $silent = $silent ? 'SILENT' : '';
+
+        $this->db_bbs->query("$cmd $table SET $sql");
+
+        if($return_insert_id) {
+            return $this->db_bbs->insert_id();
+        }
+    }
+
+    public static function implode($array, $glue = ',') {
+        $sql = $comma = '';
+        $glue = ' ' . trim($glue) . ' ';
+        foreach ($array as $k => $v) {
+            $sql .= $comma . self::quote_field($k) . '=' . self::quote($v);
+            $comma = $glue;
+        }
+        return $sql;
+    }
+
+    public static function quote_field($field) {
+        if (is_array($field)) {
+            foreach ($field as $k => $v) {
+                $field[$k] = self::quote_field($v);
+            }
+        } else {
+            if (strpos($field, '`') !== false)
+                $field = str_replace('`', '', $field);
+            $field = '`' . $field . '`';
+        }
+        return $field;
+    }
+
+    public static function quote($str, $noarray = false) {
+
+        if (is_string($str))
+            return '\'' . addcslashes($str, "\n\r\\'\"\032") . '\'';
+
+        if (is_int($str) or is_float($str))
+            return '\'' . $str . '\'';
+
+        if (is_array($str)) {
+            if($noarray === false) {
+                foreach ($str as &$v) {
+                    $v = self::quote($v, true);
+                }
+                return $str;
+            } else {
+                return '\'\'';
+            }
+        }
+
+        if (is_bool($str))
+            return $str ? '1' : '0';
+
+        return '\'\'';
+    }
+
+    public function table($table) {
+        return $this->db_bbs->tablepre . $table;
+    }
+
+    public function tname($table) {
+        return $this->db_sns->tablepre . $table;
+    }
+
+    function insertsns($username, $password, $email, $uid = 0, $questionid = '', $answer = '') {
+        $setarr = array(
+            'uid' => $uid,
+            'username' => addslashes($username),
+            'password' => md5("$uid")
+        );
+        $this->inserttable('member', $setarr, 0, true);
+
+        $space = array(
+            'uid' => $uid,
+            'username' => $username,
+            'dateline' => time(),
+            'groupid' => 0,
+            'regip' => $this->base->onlineip
+        );
+
+        $reward = array(
+            'credit' => 25,
+            'experience' => 15
+        );
+        if($reward['credit']) {
+            $space['credit'] = $reward['credit'];
+        }
+        if($reward['experience']) {
+            $space['experience'] = $reward['experience'];
+        }
+        $this->inserttable('space', $space, 0, true);
+        $this->inserttable('spacefield', array('uid'=>$uid, 'email'=>$email), 0, true);
+    }
+
+    function inserttable($tablename, $insertsqlarr, $returnid=0, $replace = false, $silent=0) {
+        $insertkeysql = $insertvaluesql = $comma = '';
+        foreach ($insertsqlarr as $insert_key => $insert_value) {
+            $insertkeysql .= $comma.'`'.$insert_key.'`';
+            $insertvaluesql .= $comma.'\''.$insert_value.'\'';
+            $comma = ', ';
+        }
+        $method = $replace?'REPLACE':'INSERT';
+        $this->db_sns->query($method.' INTO '.$this->tname($tablename).' ('.$insertkeysql.') VALUES ('.$insertvaluesql.')');
+        if($returnid && !$replace) {
+            return $this->db_sns->insert_id();
+        }
+    }
 
 	function edit_user($username, $oldpw, $newpw, $email, $ignoreoldpw = 0, $questionid = '', $answer = '') {
 		$data = $this->db->fetch_first("SELECT username, uid, password, salt FROM ".UC_DBTABLEPRE."members WHERE username='$username'");

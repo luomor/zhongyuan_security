@@ -195,6 +195,7 @@ if($step == 1)
         `matt`, `spacesta` ,`face`,`safequestion`,`safeanswer` ,`jointime` ,`joinip` ,`logintime` ,`loginip` )
        VALUES ('$mtype','$userid','$pwd','$uname','$sex','10','$dfmoney','$email','$dfscores',
        '0','$spaceSta','','$safequestion','$safeanswer','$jointime','$joinip','$logintime','$loginip'); ";
+        $dsql->SelectDB($dsql->dbName);
         if($dsql->ExecuteNoneQuery($inQuery))
         {
             $mid = $dsql->GetLastID();
