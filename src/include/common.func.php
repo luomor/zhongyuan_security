@@ -271,11 +271,7 @@ if( file_exists(DEDEINC.'/extend.func.php') )
 }
 
 function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
-
-    $ckey_length = 4;	// �����Կ���� ȡֵ 0-32;
-    // ���������Կ���������������κι��ɣ�������ԭ�ĺ���Կ��ȫ��ͬ�����ܽ��Ҳ��ÿ�β�ͬ�������ƽ��Ѷȡ�
-    // ȡֵԽ�����ı䶯����Խ�����ı仯 = 16 �� $ckey_length �η�
-    // ����ֵΪ 0 ʱ���򲻲��������Կ
+    $ckey_length = 4;
 
     $key = md5($key ? $key : UC_KEY);
     $keya = md5(substr($key, 0, 16));
@@ -321,4 +317,22 @@ function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
     } else {
         return $keyc.str_replace('=', '', base64_encode($result));
     }
+}
+
+function dintval($int, $allowarray = false) {
+    $ret = intval($int);
+    if($int == $ret || !$allowarray && is_array($int)) return $ret;
+    if($allowarray && is_array($int)) {
+        foreach($int as &$v) {
+            $v = dintval($v, true);
+        }
+        return $int;
+    } elseif($int <= 0xffffffff) {
+        $l = strlen($int);
+        $m = substr($int, 0, 1) == '-' ? 1 : 0;
+        if(($l - $m) === strspn($int,'0987654321', $m)) {
+            return $int;
+        }
+    }
+    return $ret;
 }
