@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0038)http://www.juehackr.net/win8/1807.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{dede:field name='title'/} - 高清迅雷电影 - {dede:global name='cfg_webname'/} - {dede:global name='cfg_basehost'/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='title'/}高清迅雷电影 - {dede:global.cfg_description/}" />
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/images/style.css">
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/images/jquery-1.7.1.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/images/custom.js"></SCRIPT>
+</HEAD>
+<BODY>
+{dede:include filename="head.htm"/}
+<DIV class="clear space"></DIV>
+<DIV id=main>
+<DIV id=mainleft>
+<DIV id=loc>
+<DIV class=here>现在位置：{dede:field name='position'/} {dede:field name='title'/}</DIV></DIV>
+<DIV id=art_box>
+<H2 class=art_title>{dede:field name='title'/}</H2><SPAN class=art_beta>作者：{dede:field.writer/} ⁄ 时间：{dede:field name='pubdate' function="GetDateMk('@me')"/}  ⁄  浏览：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>人次</SPAN> <SPAN class=art_content>
+<DIV class=ad710px><!--我是广告--></DIV>
+<P>{dede:field name='body'/}</P>
+
+<DIV id=fenxiang><!-- 将此标记放在您希望显示like按钮的位置 -->
+
+</DIV>
+<DIV class=ad710px><!--我是广告--></DIV></SPAN><SPAN 
+class=art_info>转载请保留原文链接:<a href="{dede:field name='arcurl'/}">{dede:global.cfg_basehost/}{dede:field name='arcurl'/}</a></SPAN><SPAN 
+class=art_pre_next>上一篇：{dede:prenext get='pre'/}<BR>下一篇：{dede:prenext get='next'/}
+</SPAN><SPAN class=art_related></SPAN></DIV>
+<DIV id=art_about><SPAN class=about_left>
+<H3>随机推荐</H3>
+<UL>
+  <LI class=thum_news>
+{dede:arclist row=9 orderby=hot flag='c' imgwidth='100' imgheight='76'}
+<A title="[field:title /]" href="[field:arcurl /]" target=_blank>[field:image/]</A>
+{/dede:arclist} 
+</LI></UL></SPAN><SPAN class=about_right>
+<H3>相关文章</H3>
+<UL>
+{dede:arclist row=10 titlelen=45}
+  <LI><A href="[field:arcurl /]" target="_blank">[field:title /]</A></LI>
+ {/dede:arclist} 
+ </UL></SPAN>
+<DIV class=clear></DIV>
+<H3></H3></DIV>
+
+</DIV>
+<DIV id=mainright>
+<UL id=sidebar>
+  <DIV class=ad245px><!--我是广告--></DIV>
+  <LI class=wtitle>
+  <H3 class=wtitle><SPAN>精彩推荐</SPAN></H3>
+  <UL id=hotlog>
+{dede:arclist row=15 titlelen=60 flag='c'}
+    <LI><A href="[field:arcurl /]" title="[field:title/]" target=_blank>[field:title/]</A></LI>
+{/dede:arclist}
+</UL></LI>
+  <LI>
+  <DIV id=tab-title>
+  <H3><SPAN class=selected>热门看点</SPAN> / <SPAN>随机推荐</SPAN></H3></DIV>
+  <DIV id=tab-content>
+  <UL>
+{dede:arclist row=10 titlelen=60 orderby=hot}
+    <LI><A href="[field:arcurl /]" title="[field:title/]" target=_blank>[field:title/]</A></LI>
+{/dede:arclist}
+</UL>
+  <UL class=hide>
+{dede:arclist row=10 titlelen=60 orderby=rand flag='c'}
+    <LI><A href="[field:arcurl /]" title="[field:title/]" target=_blank>[field:title/]</A></LI>
+{/dede:arclist}
+</UL>
+  <DIV class=clear></DIV></DIV></LI><li></li>
+
+  <DIV id=float class=float>
+  <DIV class=ad245px>
+<script src='http://www.aozo.cn/plus/ad_js.php?aid=5' language='javascript'></script>
+  </DIV>
+</DIV></UL><!--end #siderbar--></DIV></DIV>
+<DIV class="clear space">
+{dede:include filename="footer.htm"/}
+</DIV></DIV></BODY></HTML>
