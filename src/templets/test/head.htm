@@ -1,0 +1,30 @@
+<DIV id=header>
+<DIV id=top-bar>
+<DIV id=header2>
+<DIV class=left-wrap>
+<A id=ghome href="{dede:global.cfg_cmsurl/}/"target=_self>首页</A>|<a href="{dede:global.cfg_cmsurl/}/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a>|<a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a></DIV>
+</DIV></DIV>
+<DIV id=header2>
+<DIV id=logo>
+<H1><A href="{dede:global.cfg_cmsurl/}/">{dede:global.cfg_webname/}</A></H1><SPAN class=blog_des>记录精彩,分享收获,发布灵感..！</SPAN> </DIV>
+<DIV class=header_right>
+<DIV id=ad></DIV></DIV>
+<DIV id=searchbar>
+<FORM action="{dede:global.cfg_cmsurl/}/plus/search.php" target=_blank>
+<DIV class=gm-master-inp><INPUT accessKey=s 
+onblur="if(this.value == '')this.value='找什么？搜一下更快！'" id=searchTextbox 
+class=focus onFocus="if(this.value == '找什么？搜一下更快！')this.value = ''" name=q 
+value=找什么？搜一下更快！ size=24 results="8" autosave="baidu" autocomplete="off"> <INPUT 
+name=tn value=msvista_pg type=hidden> <INPUT name=ch value=6 type=hidden> <INPUT 
+name=ch value=6 type=hidden> <INPUT name=si value=juehackr.net type=hidden> 
+<INPUT name=sts value=Juehackr.Net type=hidden> <INPUT name=ct value=2097152 
+type=hidden> </DIV><BUTTON id=gm_act_sbtn type=submit>搜索</BUTTON> 
+</FORM></DIV></DIV></DIV>
+<DIV id=main_nav>
+<DIV id=main_nav2>
+<UL>
+        <li class=common><a href='{dede:global.cfg_cmsurl/}/'><span>首页</span></a></li>
+      	{dede:channel type='top' row='10' currentstyle="<li class='current'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      	{/dede:channel}
+</UL></DIV></DIV>

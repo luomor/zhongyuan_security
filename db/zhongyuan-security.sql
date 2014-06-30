@@ -95,3 +95,6 @@ alter table `zhongyuan_bbs`.zhongyuan_ucenter_memberfields AUTO_INCREMENT=4;
 show create table zhongyuan_bbs.zhongyuan_common_member;
 
 INSERT INTO `zhongyuan_security`.zhongyuan_member (`mtype` ,`userid` ,`pwd` ,`uname` ,`sex` ,`rank` ,`money` ,`email` ,`scores` , `matt`, `spacesta` ,`face`,`safequestion`,`safeanswer` ,`jointime` ,`joinip` ,`logintime` ,`loginip` ) VALUES ('个人','test1','e10adc3949ba59abbe56e057f20f883e','test1','','10','0','test1@zhongguohaogongsi.com','0', '0','-10','','0','','1403520536','127.0.0.1','1403520536','127.0.0.1');
+
+-- 2014-06-29
+select * from zhongyuan_bbs.zhongyuan_ucenter_members;
