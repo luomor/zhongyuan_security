@@ -37,6 +37,23 @@
 [zhongyuan_security_1.0.0.1 2014-06-20 张春生]
 1.新功能：调整域名
 
+[zhongyuan_security_1.0.0.1 2014-06-20 张春生]
+1.新功能：调整cookie作用域为.zhongguohaogongsi.com
+
+[zhongyuan_security_1.0.0.1 2014-06-23 张春生]
+1.新功能：调整注册功能，同时注册dedecms,bbs,sns
+2.新功能：增加php配置
+3.新功能：调整todo内容
+
+[zhongyuan_security_1.0.0.1 2014-06-30 张春生]
+1.新功能：调整菜单样式
+
+[zhongyuan_security_1.0.0.1 2014-07-07 张春生]
+1.新功能：更改首页样式
+
+[zhongyuan_security_1.0.0.1 2014-07-19 张春生]
+1.新功能:更新sql语句
+
 --备注分类
 1、新功能：
 2、Bug:

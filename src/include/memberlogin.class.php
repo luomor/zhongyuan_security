@@ -484,6 +484,7 @@ class MemberLogin
                     return -2;
                 }
                 else {
+                    //PutCookie('uchome_auth', authcode("$row[pwd]\t$row[mid]", 'ENCODE'), $this->M_KeepTime);
                     $this->PutLoginInfo($row['mid'], $row['logintime']);
                     return 1;
                 }

@@ -69,7 +69,7 @@ class SearchView
      * @return    string
      */
     function __construct($typeid,$keyword,$orderby,$achanneltype="all",
-    $searchtype='',$starttime=0,$upagesize=20,$kwtype=1,$mid=0)
+                         $searchtype='',$starttime=0,$upagesize=20,$kwtype=1,$mid=0)
     {
         global $cfg_search_max,$cfg_search_maxrc,$cfg_search_time,$cfg_sphinx_article;
         if(empty($upagesize))
@@ -114,20 +114,20 @@ class SearchView
         {
             // 初始化sphinx
             $this->sphinx = new SphinxClient;
-            
+
             $mode = SPH_MATCH_EXTENDED2;            //匹配模式
             $ranker = SPH_RANK_PROXIMITY_BM25; //统计相关度计算模式，仅使用BM25评分计算
             $this->sphinx->SetServer($GLOBALS['cfg_sphinx_host'], $GLOBALS['cfg_sphinx_port']);
             $this->sphinx->SetArrayResult(true);
             $this->sphinx->SetMatchMode($mode);
             $this->sphinx->SetRankingMode($ranker);
-            
+
             $this->CountRecordSphinx();
         } else {
             $this->CountRecord();
         }
-        
-        
+
+
         $tempfile = $GLOBALS['cfg_basedir'].$GLOBALS['cfg_templets_dir']."/".$GLOBALS['cfg_df_style']."/search.htm";
         if(!file_exists($tempfile)||!is_file($tempfile))
         {
@@ -146,12 +146,12 @@ class SearchView
         {
             $this->dsql->ExecuteNoneQuery("UPDATE `#@__search_keywords` SET result='".$this->TotalResult."' WHERE keyword='".addslashes($keyword)."'; ");
         }
-    
+
     }
 
     //php4构造函数
     function SearchView($typeid,$keyword,$orderby,$achanneltype="all",
-    $searchtype="",$starttime=0,$upagesize=20,$kwtype=1,$mid=0)
+                        $searchtype="",$starttime=0,$upagesize=20,$kwtype=1,$mid=0)
     {
         $this->__construct($typeid,$keyword,$orderby,$achanneltype,$searchtype,$starttime,$upagesize,$kwtype,$mid);
     }
@@ -287,7 +287,7 @@ class SearchView
             $k = addslashes($k);
             if($lsql=='')
             {
-                $lsql = $lsql." CONCAT(spwords,' ') LIKE '%$k %' ";    
+                $lsql = $lsql." CONCAT(spwords,' ') LIKE '%$k %' ";
             }else{
                 $lsql = $lsql." OR CONCAT(spwords,' ') LIKE '%$k %' ";
             }
@@ -351,7 +351,7 @@ class SearchView
         }
         return $fstr;
     }
-    
+
     // Sphinx记录统计
     function CountRecordSphinx()
     {
@@ -369,7 +369,7 @@ class SearchView
         {
             $this->PageNo = 1;
         }
-        
+
         if($this->StartTime > 0)
         {
             $this->sphinx->SetFilterRange('senddate', $this->StartTime, time(), false);
@@ -387,7 +387,7 @@ class SearchView
         // var_dump($this->sphinx);exit;
         $res = array();
         $res = AutoCharset($this->sphinx->Query($this->Keywords, 'mysql, delta'), 'utf-8', 'gbk');
-        
+
         $this->TotalResult = $res['total'];
     }
 
@@ -505,17 +505,17 @@ class SearchView
                     $InnerText = trim($ctag->GetInnerText());
                 }
                 $this->dtp->Assign($tagid,
-                $this->GetArcList($limitstart,
-                $row,
-                $ctag->GetAtt("col"),
-                $ctag->GetAtt("titlelen"),
-                $ctag->GetAtt("infolen"),
-                $ctag->GetAtt("imgwidth"),
-                $ctag->GetAtt("imgheight"),
-                $this->ChannelType,
-                $this->OrderBy,
-                $InnerText,
-                $ctag->GetAtt("tablewidth"))
+                    $this->GetArcList($limitstart,
+                        $row,
+                        $ctag->GetAtt("col"),
+                        $ctag->GetAtt("titlelen"),
+                        $ctag->GetAtt("infolen"),
+                        $ctag->GetAtt("imgwidth"),
+                        $ctag->GetAtt("imgheight"),
+                        $this->ChannelType,
+                        $this->OrderBy,
+                        $InnerText,
+                        $ctag->GetAtt("tablewidth"))
                 );
             }
             else if($tagname=="pagelist")
@@ -573,8 +573,8 @@ class SearchView
      *  获得文档列表
      *
      * @access    public
-     * @param     int  $limitstart  限制开始  
-     * @param     int  $row  行数 
+     * @param     int  $limitstart  限制开始
+     * @param     int  $row  行数
      * @param     int  $col  列数
      * @param     int  $titlelen  标题长度
      * @param     int  $infolen  描述长度
@@ -587,7 +587,7 @@ class SearchView
      * @return    string
      */
     function GetArcList($limitstart=0,$row=10,$col=1,$titlelen=30,$infolen=250,
-    $imgwidth=120,$imgheight=90,$achanneltype="all",$orderby="default",$innertext="",$tablewidth="100")
+                        $imgwidth=120,$imgheight=90,$achanneltype="all",$orderby="default",$innertext="",$tablewidth="100")
     {
         global $cfg_sphinx_article;
         $typeid=$this->TypeID;
@@ -610,7 +610,7 @@ class SearchView
         {
             $innertext = GetSysTemplets("search_list.htm");
         }
-        
+
         if ($cfg_sphinx_article == 'Y')
         {
             $ordersql = '';
@@ -639,26 +639,26 @@ class SearchView
                     $ordersql="@sortrank desc";
                 }
             }
-            
+
             $this->sphinx->SetLimits($limitstart, (int)$row, ($row>1000) ? $row : 1000);
             $res = array();
             $res = AutoCharset($this->sphinx->Query($this->Keywords, 'mysql, delta'), 'utf-8', 'gbk');
-            
+
             foreach ($res['words'] as $k => $v) {
                 $this->Keywords .= " $k";
             }
             foreach($res['matches'] as $_v) {
                 $aids[] = $_v['id'];
             }
-            
+
             $aids = @implode(',', $aids);
-            
+
             //搜索
             $query = "SELECT arc.*,act.typedir,act.typename,act.isdefault,act.defaultname,act.namerule,
             act.namerule2,act.ispart,act.moresite,act.siteurl,act.sitepath
             FROM `#@__archives` arc LEFT JOIN `#@__arctype` act ON arc.typeid=act.id
             WHERE arc.id IN ($aids)";
-            
+
         } else {
             //排序方式
             $ordersql = '';
@@ -694,7 +694,7 @@ class SearchView
             FROM `{$this->AddTable}` arc LEFT JOIN `#@__arctype` act ON arc.typeid=act.id
             WHERE {$this->AddSql} $ordersql LIMIT $limitstart,$row";
         }
-        
+
         $this->dsql->SetQuery($query);
         $this->dsql->Execute("al");
         $artlist = "";
@@ -727,7 +727,7 @@ class SearchView
                     }
                     //处理一些特殊字段
                     $row["arcurl"] = GetFileUrl($row["id"],$row["typeid"],$row["senddate"],$row["title"],
-                    $row["ismake"],$row["arcrank"],$row["namerule"],$row["typedir"],$row["money"],$row['filename'],$row["moresite"],$row["siteurl"],$row["sitepath"]);
+                        $row["ismake"],$row["arcrank"],$row["namerule"],$row["typedir"],$row["money"],$row['filename'],$row["moresite"],$row["siteurl"],$row["sitepath"]);
                     $row["description"] = $this->GetRedKeyWord(cn_substr($row["description"],$infolen));
                     $row["title"] = $this->GetRedKeyWord(cn_substr($row["title"],$titlelen));
                     $row["id"] =  $row["id"];
@@ -826,7 +826,7 @@ class SearchView
             return "共0页/".$this->TotalResult."条记录";
         }
         $purl = $this->GetCurUrl();
-        
+
         $oldkeyword = (empty($oldkeyword) ? $this->Keyword : $oldkeyword);
 
         //当结果超过限制时，重设结果页数

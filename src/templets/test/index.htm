@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/images/style.css">
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/images/jquery-1.7.1.js"></SCRIPT>
+<SCRIPT type=text/javascript>$(document).ready(function(){slideShow();});function slideShow(){$('#gallery a').css({opacity:0.0});$('#gallery a:first').css({opacity:1.0});$('#gallery .caption').css({opacity:0.7});$('#gallery .caption').css({width:$('#gallery a').find('img').css('width')});$('#gallery .content').html($('#gallery a:first').find('img').attr('rel')).animate({opacity:0.7},400);setInterval('gallery()',4000);}
+function gallery(){var current=($('#gallery a.show')?$('#gallery a.show'):$('#gallery a:first'));var next=((current.next().length)?((current.next().hasClass('caption'))?$('#gallery a:first'):current.next()):$('#gallery a:first'));var caption=next.find('img').attr('rel');next.css({opacity:0.0}).addClass('show').animate({opacity:1.0},1000);current.animate({opacity:0.0},1000).removeClass('show');$('#gallery .caption').animate({opacity:0.0},{queue:false,duration:0}).animate({height:'1px'},{queue:true,duration:300});$('#gallery .caption').animate({opacity:0.7},100).animate({height:'100px'},500);$('#gallery .content').html(caption);}</SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/images/custom.js"></SCRIPT>
+</HEAD>
+<BODY>
+<DIV id=header>
+<DIV id=top-bar>
+<DIV id=header2>
+<DIV class=left-wrap>
+<A id=ghome href="{dede:global.cfg_cmsurl/}/"target=_self>首页</A>|<a href="{dede:global.cfg_cmsurl/}/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a>|<a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a></DIV>
+</DIV></DIV>
+<DIV id=header2>
+<DIV id=logo>
+<H1><A href="{dede:global.cfg_cmsurl/}/">{dede:global.cfg_webname/}</A></H1><SPAN class=blog_des>记录精彩,分享收获,发布灵感..！</SPAN> </DIV>
+<DIV class=header_right>
+<DIV id=ad></DIV></DIV>
+<DIV id=searchbar>
+<FORM action="{dede:global.cfg_cmsurl/}/plus/search.php" target=_blank>
+<DIV class=gm-master-inp><INPUT accessKey=s 
+onblur="if(this.value == '')this.value='找什么？搜一下更快！'" id=searchTextbox 
+class=focus onFocus="if(this.value == '找什么？搜一下更快！')this.value = ''" name=q 
+value=找什么？搜一下更快！ size=24 results="8" autosave="baidu" autocomplete="off"> <INPUT 
+name=tn value=msvista_pg type=hidden> <INPUT name=ch value=6 type=hidden> <INPUT 
+name=ch value=6 type=hidden> <INPUT name=si value=juehackr.net type=hidden> 
+<INPUT name=sts value=Juehackr.Net type=hidden> <INPUT name=ct value=2097152 
+type=hidden> </DIV><BUTTON id=gm_act_sbtn type=submit>搜索</BUTTON> 
+</FORM></DIV></DIV></DIV>
+<DIV id=main_nav>
+<DIV id=main_nav2>
+<UL>
+        <li class=current><a href='{dede:global.cfg_cmsurl/}/'><span>首页</span></a></li>
+      	{dede:channel type='top' row='10' currentstyle="<li class='common'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      	{/dede:channel}
+</UL></DIV></DIV>
+<DIV class="clear space"></DIV>
+<DIV id=main>
+<DIV class=ad300px>广告标记1</DIV>
+<DIV class=index_list_box>
+<DIV id=sidepic>
+<H3><IMG alt=头条 src="{dede:global.cfg_templets_skin/}/images/ggao.gif" width=15 height=15>{dede:arclist row=1 titlelen=60 flag='h'}[field:textlink/]{/dede:arclist}</H3>
+<UL>
+{dede:arclist row=8 titlelen=60 orderby=pubdate}
+  <LI><A title=[field:title /] href="[field:arcurl /]" target=_blank>[field:title /]</A></LI>
+{/dede:arclist}
+</UL></DIV>
+<DIV id=picnews>
+<DIV id=gallery>
+{dede:arclist row=5 titlelen=60 flag='f'}
+<A class=show title=[field:title /] href="[field:arcurl /]" target=_blank><img src='[field:picname/]' width=320 height=240 
+rel="<h4>[field:description function="cn_substr(@me,300)"/]......"></A>
+{/dede:arclist} 
+
+<DIV class=caption>
+<DIV class=content></DIV></DIV></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV class=ad970px><!--我是广告--></DIV></DIV>
+<DIV id=mainleft>
+{dede:channelArtlist}
+<DIV class=index_list_box>
+<DIV class=index_cat_title>
+{dede:type}<H3><A href="[field:typelink /]">[field:typename /]</A></H3><SPAN class=cat_more><a href="[field:typelink /]" target="_blank" title="更多...">更多...</A></SPAN>{/dede:type}
+<DIV class=clear></DIV></DIV>
+{dede:arclist limit='0,1' type='image.' imgwidth='100' imgheight='76'}		 
+<UL class=index_list_first>
+  <LI><SPAN class=index_img><A title="[field:title/]" href="[field:arcurl/]" target=_blank>[field:image/]</A></SPAN> 
+  <H4 class=index_title><A title="[field:title/]" href="[field:arcurl/]" target=_blank>[field:title/]</A></H4><SPAN class=index_des>[field:description function="cn_substr(@me,100)"/]......</SPAN> </LI></UL>
+{/dede:arclist}
+<UL class=index_list>
+{dede:arclist titlelen='50' limit='1,11'}
+  <LI><A title="[field:title/]" href="[field:arcurl /]" target=_blank>[field:title/]</A> <SPAN>[field:pubdate function='strftime("%m-%d",@me)'/]</SPAN> </LI>
+{/dede:arclist}  
+</UL>
+<DIV class=clear></DIV></DIV>
+{/dede:channelArtlist} 
+
+
+<UL class=list_box>
+  <DIV class=ad710px><!--我是广告--></DIV>
+{dede:arclist row=10 titlelen=60 orderby=pubdate imgwidth='160' imgheight='120'}
+  <LI class=list_log><SPAN class=list_imgt><A title=[field:title/] href="[field:arcurl/]" target=_blank>[field:image/]</A></SPAN> 
+  <H4 class=index_title><A title=[field:title/] href="[field:arcurl/]" target=_blank>[field:title/]</A></H4><SPAN class=list_des>[field:description function="cn_substr(@me,300)"/]......</SPAN> 
+  <SPAN class=list_beta>于[field:pubdate function='strftime("%m-%d",@me)'/]发表在分类 <A href="[field:typeurl /]">[field:typename /]</A> ，阅读[field:click/]。</SPAN> </LI>
+{/dede:arclist} 
+
+</UL></DIV>
+<DIV id=mainright>
+<UL id=sidebar>
+  <LI class=wtitle>
+  <H3 class=wtitle><SPAN>信息统计</SPAN></H3>
+  <UL id=hotlog>
+<li>{dede:sql sql="select count(ID) as c from dede_archives where channel=1"}资源数量： <b><font color="#FF0000">[field:c /]</font></b> 篇{/dede:sql}</li>
+<li>{dede:sql sql="SELECT count( ID ) AS c FROM dede_archives WHERE pubdate > UNIX_TIMESTAMP( CURDATE( ) ) "}今日更新： <b><font color="#FF0000">[field:c /]</font></b> 篇{/dede:sql}</li>
+<li>{dede:sql sql="select sum(click) as c from dede_archives"}浏览总量：<b><font color="#FF0000">8[field:c /]</font></b> 次{/dede:sql}</li>
+<li>网站名称：<b><font color="#FF0000">极点网</font></b></li>
+<li>网站域名：<strong><font color="#FF0000">www.aozo.cn</font></strong></li>
+  </UL></LI>
+  <LI class=wtitle>
+  <H3 class=wtitle><SPAN>精彩推荐</SPAN></H3>
+  <UL id=hotlog>
+{dede:arclist row=15 titlelen=60 flag='c'}
+    <LI><A href="[field:arcurl /]" title="[field:title/]" target=_blank>[field:title/]</A></LI>
+{/dede:arclist}
+  </UL></LI>
+  <LI>
+  <DIV id=tab-title>
+  <H3><SPAN class=selected>热门看点</SPAN> / <SPAN>随机推荐</SPAN></H3></DIV>
+  <DIV id=tab-content>
+  <UL>
+{dede:arclist row=10 titlelen=60 orderby=hot}
+    <LI><A href="[field:arcurl /]" title="[field:title/]" target=_blank>[field:title/]</A></LI>
+{/dede:arclist}
+ </UL>
+  <UL class=hide>
+{dede:arclist row=10 titlelen=60 orderby=rand flag='c'}
+    <LI><A href="[field:arcurl /]" title="[field:title/]" target=_blank>[field:title/]</A></LI>
+{/dede:arclist}
+  </UL>
+  <DIV class=clear></DIV></DIV></LI><li></li>
+
+  <DIV id=float class=float>
+  <DIV class=ad245px><script src='http://www.aozo.cn/plus/ad_js.php?aid=5' language='javascript'></script></DIV>
+</DIV></UL><!--end #siderbar--></DIV></DIV>
+<DIV class="clear space">
+<DIV id=index_flinks>
+<H4>友情链接<SPAN style="COLOR: #333; FONT-SIZE: 13px">（欢迎相关网站 | <a href="/plus/flink.php">所有链接</a> | <a href="/plus/flink_add.php">申请加入</a> ）</SPAN></H4>
+<DIV class=inerf><ul>{dede:flink row='24'/}</ul>
+<DIV class=clear></DIV></DIV>
+<DIV class=clear></DIV></DIV>
+<DIV class="clear space">
+{dede:include filename="footer.htm"/}
+</DIV></DIV></BODY></HTML>

@@ -75,6 +75,8 @@ admin
 zhongyuan123
 系统邮箱 system@zhongguohaogongsi.com
 管理员邮箱 admin@zhongguohaogongsi.com
+html5
+123456
 </pre>
 
 ###### mysql
@@ -87,6 +89,11 @@ zhongyuan123
 create database zhongyuan_security character set utf8 collate utf8_general_ci;
 GRANT ALL ON `zhongyuan_security`.* TO `zhongyuan`@localhost IDENTIFIED BY 'zhongyuan123';
 FLUSH PRIVILEGES;
+</pre>
+
+###### php
+<pre>
+short_open_tag = On
 </pre>
 
 ###### database
@@ -132,4 +139,26 @@ sudo chgrp -R didiwuliu sns
 <pre>
 git rm -r src/a --cached
 git rm -r src/data --cached
+</pre>
+
+###### cookie
+<pre>
+dedecms
+cookie.helper.php
+PutCookie
+setcookie($key, $value, time()+$kptime, $pa,$cfg_domain_cookie);
+cookie加密码: Sk6SeSxPGRPyEDRQgOO7QipGqPA4cl3
+跨域共享cookie的域名: .zhongguohaogongsi.com
+
+bbs
+config/config_global.php
+$_config['cookie']['cookiedomain'] = '.zhongguohaogongsi.com';
+
+sns
+config.php
+$_SC['cookiedomain'] 	= '.zhongguohaogongsi.com';
+
+ucenter
+config.inc.php
+define('UC_COOKIEDOMAIN', '.zhongguohaogongsi.com');
 </pre>
