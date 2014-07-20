@@ -970,6 +970,15 @@ if(!empty($_G['forum']['threadsorts']['templatelist']) && $_G['forum']['status']
 	$template = 'diy:group/group:'.$_G['fid'];
 }
 
+if($_G['fid'] == 2) {
+    $template = 'diy:forum/forumdisplay_financer_list:'.$_G['fid'];
+} else {
+    $forum_forum = C::t('forum_forum')->fetch($_G['fid']);
+    if($forum_forum["fup"] == 2) {
+        $template = 'diy:forum/forumdisplay_financer:'.$_G['fid'];
+    }
+}
+
 if(!defined('IN_ARCHIVER')) {
 	include template($template);
 } else {

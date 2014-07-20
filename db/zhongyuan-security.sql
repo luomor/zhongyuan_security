@@ -251,3 +251,5 @@ insert into fixedAsset.authuser(uid,pwd,token,lastLoginTime,uName) values('admin
 select * from zhongyuan_bbs.zhongyuan_common_style;
 select * from zhongyuan_bbs.zhongyuan_common_stylevar;
 select * from zhongyuan_bbs.zhongyuan_common_stylevar where substitute like '%iscwo_design_2013%';
+
+select * from zhongyuan_bbs.zhongyuan_forum_forum;
