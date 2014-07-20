@@ -31,25 +31,21 @@ c:\windows\system32\drivers\etc\hosts
 127.0.0.1 ucenter.zhongguohaogongsi.com
 </pre>
 
+<pre>
 222.126.242.105
 
 www.zhongguohaogongsi.com
 
 参考网站
-
 雪球网 http://xueqiu.com/
-
 福汇 fxcm http://www.fxcm-chinese.com/
-
 金融界
-
 和讯
 
 www.net.cn
-
 账号 478012339@qq.com
-
 密码 lituo521
+</pre>
 
 ###### 网站信息
 <pre>
@@ -177,11 +173,15 @@ MX记录 mxbiz1.qq.com. 5
 MX记录 mxbiz2.qq.com. 10
 
 http://mail.zhongguohaogongsi.com/
+http://exmail.qq.com/
 
 用户名:admin@zhongguohaogongsi.com
 密码:zhongyuan123
 
 用户名:system@zhongguohaogongsi.com
+密码:zhongyuan123
+
+用户名:noreply@zhongguohaogongsi.com
 密码:zhongyuan123
 
 1、MX记录：
