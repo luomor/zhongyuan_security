@@ -195,3 +195,8 @@ http://exmail.qq.com/
 3、为了避免邮件被对方误拦，建议添加SPF记录（用TXT记录）
 TXT记录值为：v=spf1 include:spf.mail.qq.com ~all
 </pre>
+
+###### 申请企业qq
+<pre>
+    http://qq.pindie.cn/
+</pre>
