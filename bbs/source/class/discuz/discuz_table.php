@@ -144,7 +144,8 @@ class discuz_table extends discuz_base
 	public function fetch_cache($ids, $pre_cache_key = null) {
 		$data = false;
 		if($this->_allowmem) {
-			if($pre_cache_key === null)	$pre_cache_key = $this->_pre_cache_key;
+			if($pre_cache_key === null)
+                $pre_cache_key = $this->_pre_cache_key;
 			$data = memory('get', $ids, $pre_cache_key);
 		}
 		return $data;
@@ -153,8 +154,10 @@ class discuz_table extends discuz_base
 	public function store_cache($id, $data, $cache_ttl = null, $pre_cache_key = null) {
 		$ret = false;
 		if($this->_allowmem) {
-			if($pre_cache_key === null)	$pre_cache_key = $this->_pre_cache_key;
-			if($cache_ttl === null)	$cache_ttl = $this->_cache_ttl;
+			if($pre_cache_key === null)
+                $pre_cache_key = $this->_pre_cache_key;
+			if($cache_ttl === null)
+                $cache_ttl = $this->_cache_ttl;
 			$ret = memory('set', $id, $data, $cache_ttl, $pre_cache_key);
 		}
 		return $ret;

@@ -247,3 +247,9 @@ select * from fixedasset.authuser;
 show Variables like '%table_names';
 
 insert into fixedAsset.authuser(uid,pwd,token,lastLoginTime,uName) values('admin','29cb0befa96eed5820ae43b4708b8a9d4518d17f5312881b1b4c73d1025f23eaee5f734c4f0c8c4499605c5c91478e0318e81e78a262779f6520ab9e1e3ca47c','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918','2014-07-09 12:40:00','admin');
+
+select * from zhongyuan_bbs.zhongyuan_common_style;
+select * from zhongyuan_bbs.zhongyuan_common_stylevar;
+select * from zhongyuan_bbs.zhongyuan_common_stylevar where substitute like '%iscwo_design_2013%';
+
+select * from zhongyuan_bbs.zhongyuan_forum_forum;
