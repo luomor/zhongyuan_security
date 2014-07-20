@@ -31,23 +31,21 @@ c:\windows\system32\drivers\etc\hosts
 127.0.0.1 ucenter.zhongguohaogongsi.com
 </pre>
 
+<pre>
 222.126.242.105
 
 www.zhongguohaogongsi.com
 
 参考网站
-
 雪球网 http://xueqiu.com/
-
 福汇 fxcm http://www.fxcm-chinese.com/
-
 金融界
+和讯
 
 www.net.cn
-
 账号 478012339@qq.com
-
 密码 lituo521
+</pre>
 
 ###### 网站信息
 <pre>
@@ -161,4 +159,39 @@ $_SC['cookiedomain'] 	= '.zhongguohaogongsi.com';
 ucenter
 config.inc.php
 define('UC_COOKIEDOMAIN', '.zhongguohaogongsi.com');
+</pre>
+
+###### qqmail
+<pre>
+zhongguohaogongsi
+zhongyuan123
+
+zhongguohaogongsi@163.com
+zhongyuan123
+
+MX记录 mxbiz1.qq.com. 5
+MX记录 mxbiz2.qq.com. 10
+
+http://mail.zhongguohaogongsi.com/
+http://exmail.qq.com/
+
+用户名:admin@zhongguohaogongsi.com
+密码:zhongyuan123
+
+用户名:system@zhongguohaogongsi.com
+密码:zhongyuan123
+
+用户名:noreply@zhongguohaogongsi.com
+密码:zhongyuan123
+
+1、MX记录：
+邮件服务器名：mxbiz1.qq.com.   优先级：5
+邮件服务器名：mxbiz2.qq.com.   优先级：10
+
+2、使用mai.l登陆地址的别名记录：
+别名/CNAME：mail (请注意，这里只能用mail，不可以用其他内容)
+服务器名：exmail.qq.com
+
+3、为了避免邮件被对方误拦，建议添加SPF记录（用TXT记录）
+TXT记录值为：v=spf1 include:spf.mail.qq.com ~all
 </pre>
