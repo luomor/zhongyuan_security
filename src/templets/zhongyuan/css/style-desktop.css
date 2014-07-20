@@ -434,3 +434,26 @@ ul.pager li a {
     color: #868686;
     padding: 4px 10px;
 }
+
+#customerService {
+    color: #000000;
+    height: auto;
+    left: 85%;
+    overflow: hidden;
+    position: fixed;
+    top: 137px;
+    width: 200px;
+    z-index: 48;
+}
+
+#customerService a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#customerService a > img {
+    vertical-align: bottom;
+    position: relative;
+    top: 3px;
+}
