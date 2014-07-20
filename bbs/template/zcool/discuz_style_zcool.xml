@@ -44,8 +44,8 @@
 			<item id="menuhoverbgcolor"><![CDATA[#005AB4 nv_a.png no-repeat 50% -33px]]></item>
 			<item id="titlebgcolor"><![CDATA[#F2F2F2 title.png repeat-x 0 0]]></item>
 			<item id="font"><![CDATA['Microsoft YaHei',sans-serif]]></item>
-			<item id="styleimgdir"><![CDATA[template/iscwo_design_2013/img]]></item>
-			<item id="imgdir"><![CDATA[template/iscwo_design_2013/img]]></item>
+			<item id="styleimgdir"><![CDATA[template/zcool/img]]></item>
+			<item id="imgdir"><![CDATA[template/zcool/img]]></item>
 			<item id="boardimg"><![CDATA[logo.png]]></item>
 			<item id="available"><![CDATA[]]></item>
 			<item id="headertext"><![CDATA[#444]]></item>

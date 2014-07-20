@@ -66,7 +66,7 @@
 		<!--{if $thread['attachment'] == 2}-->
 			<a style="text-decoration:underline;color: #000" class="simage" href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank">
 			<!--{eval $thread['coverpath'] = getthreadcover($thread['tid'], 1);}-->
-			<img style="width: 290px;height:180px" src="$thread[coverpath]" onerror='this.src="template/iscwo_design_2013/img/nophoto.gif"' border='0' />
+			<img style="width: 290px;height:180px" src="$thread[coverpath]" onerror='this.src="template/zcool/img/nophoto.gif"' border='0' />
 			<div class="simagemask">
 				<p>
 					$thread[subject]{echo messagecutstr(strip_tags($thread['post']['message']), 200);}

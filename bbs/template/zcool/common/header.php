@@ -1,6 +1,6 @@
 <?php echo '唯美设计QQ:474902417商业模板保护！请到官网上购买正版模板 http://addon.discuz.com/?@1439.developer';exit;?>
 <!--{subtemplate common/header_common}-->
-<!--{eval require_once("template/iscwo_design_2013/forum/vime.php");}-->
+<!--{eval require_once("template/zcool/forum/vime.php");}-->
 	<meta name="application-name" content="$_G['setting']['bbname']" />
 	<meta name="msapplication-tooltip" content="$_G['setting']['bbname']" />
 	<!--{if $_G['setting']['portalstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][1]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['portal']) ? 'http://'.$_G['setting']['domain']['app']['portal'] : $_G[siteurl].'portal.php'};icon-uri={$_G[siteurl]}{IMGDIR}/portal.ico" /><!--{/if}-->
@@ -38,7 +38,7 @@
               <dl>
                 <dd class="wrap_z">请升级你的浏览器，告别IE6，体验更精彩的互联网</dd>
                 <dd class="wrap_y">
-                    <a href="http://info.msn.com.cn/ie9/" target="_blank"><img src="template/iscwo_design_2013/img/images/ie6_ie9_logo.gif" title="IE9"/></a>　　<a href="http://www.google.cn/chrome/" target="_blank"><img src="template/iscwo_design_2013/img/images/ie6_chrome_logo.gif" title="Chrome"/></a>　　<a href="http://www.firefox.com.cn/download/" target="_blank"><img src="template/iscwo_design_2013/img/images/ie6_firefox_logo.gif" title="Firefox"/></a>
+                    <a href="http://info.msn.com.cn/ie9/" target="_blank"><img src="template/zcool/img/images/ie6_ie9_logo.gif" title="IE9"/></a>　　<a href="http://www.google.cn/chrome/" target="_blank"><img src="template/zcool/img/images/ie6_chrome_logo.gif" title="Chrome"/></a>　　<a href="http://www.firefox.com.cn/download/" target="_blank"><img src="template/zcool/img/images/ie6_firefox_logo.gif" title="Firefox"/></a>
                 </dd>
               </dl>
             </div>

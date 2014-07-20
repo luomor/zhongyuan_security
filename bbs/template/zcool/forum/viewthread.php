@@ -313,7 +313,7 @@
 
 
 		<div class="s-box sads group">
-			<img src="template/iscwo_design_2013/img/images/a.png" alt="刷一下就知道" title="刷一下就知道">
+			<img src="template/zcool/img/images/a.png" alt="刷一下就知道" title="刷一下就知道">
 		</div>
 
 
