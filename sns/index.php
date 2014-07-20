@@ -10,7 +10,6 @@ if(is_numeric($_SERVER['QUERY_STRING'])) {
 	showmessage('enter_the_space', "space.php?uid=$_SERVER[QUERY_STRING]", 0);
 }
 
-//二级域名
 if(!isset($_GET['do']) && $_SCONFIG['allowdomain']) {
 	$hostarr = explode('.', $_SERVER['HTTP_HOST']);
 	$domainrootarr = explode('.', $_SCONFIG['domainroot']);
@@ -20,7 +19,6 @@ if(!isset($_GET['do']) && $_SCONFIG['allowdomain']) {
 }
 
 if($_SGLOBAL['supe_uid']) {
-	//已登录，直接跳转个人首页
 	showmessage('enter_the_space', 'space.php?do=home', 0);
 }
 
@@ -31,7 +29,6 @@ if(empty($_SCONFIG['networkpublic'])) {
 	
 	$spacelist = array();
 	if($_SGLOBAL['timestamp'] - $cachetime > 900) {
-		//20位热门用户
 		$query = $_SGLOBAL['db']->query("SELECT s.*, sf.resideprovince, sf.residecity
 			FROM ".tname('space')." s
 			LEFT JOIN ".tname('spacefield')." sf ON sf.uid=s.uid
@@ -43,8 +40,7 @@ if(empty($_SCONFIG['networkpublic'])) {
 	} else {
 		$spacelist = unserialize(sreadfile($cachefile));
 	}
-	
-	//应用
+
 	$myappcount = 0;
 	$myapplist = array();
 	if($_SCONFIG['my_status']) {
@@ -56,8 +52,7 @@ if(empty($_SCONFIG['networkpublic'])) {
 			}
 		}
 	}
-		
-	//实名
+
 	foreach ($spacelist as $key => $value) {
 		realname_set($value['uid'], $value['username'], $value['name'], $value['namestatus']);
 	}
@@ -68,5 +63,4 @@ if(empty($_SCONFIG['networkpublic'])) {
 } else {
 	include_once(S_ROOT.'./source/network.php');
 }
-
 ?>
