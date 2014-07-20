@@ -1,3 +1,11 @@
+<script type="text/javascript">
+    function checkUser() {
+        var taget_obj = document.getElementById('_userlogin');
+        myajax = new DedeAjax(taget_obj, false, false, "", "", "");
+        myajax.SendGet2("{dede:global name="cfg_memberurl"/}/ajax_userboxsta.php");
+        DedeXHTTP = null;
+    }
+</script>
 <div id="header-wrapper">
     <div class="container">
         <div class="row">
@@ -69,3 +77,6 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    checkUser();
+</script>

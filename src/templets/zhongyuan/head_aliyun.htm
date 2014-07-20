@@ -1,19 +1,28 @@
+<script type="text/javascript">
+    function checkUser() {
+        var taget_obj = document.getElementById('_userlogin');
+        myajax = new DedeAjax(taget_obj, false, false, "", "", "");
+        myajax.SendGet2("{dede:global name="cfg_memberurl"/}/ajax_userboxsta.php");
+        DedeXHTTP = null;
+    }
+</script>
 <div class="tc-page-head J_pageHead">
     <div class="inner fix">
         <h1 class="logo lf fix">
             <a href="/">
-                <img class="main lf" src="http://gtms02.alicdn.com/tps/i2/T1qIPjFwlcXXcL6NDm-222-54.png" alt="阿里云解析"></a>
+                <img class="main lf" src="{dede:global.cfg_templets_skin/}/images/logo.png" alt="中国好公司">
+            </a>
         </h1>
         <div class="info rf">
             <p class="user">
-                <?php
-                //未登录显示的head
-                if(!$cfg_ml->IsLogin()) {
-                ?>
-                您好，<a href="https://account.www.net.cn/profile/profile.htm" target="_blank">478012339</a>
-                <span class="s">|</span>
-                <a href="../member/index_do.php?fmdo=login&dopost=exit#">[退出]</a>
-                <span class="s">|</span>
+                <div id="_userlogin">
+                    <a href="{dede:global.cfg_memberurl/}/login.php" >登录</a>
+                    <span class="s">|</span>
+                    <a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew">注册帐号</a>
+                    <span class="s">|</span>
+                    <a href="{dede:global.cfg_memberurl/}/resetpassword.php">忘记密码?</a>
+                    <span class="s">|</span>
+                </div>
                 <a href="http://bbs.zhongguohaogongsi.com" target="_blank">论坛</a>
                 <span class="s">|</span>
                 <a href="http://sns.zhongguohaogongsi.com" target="_blank">个人空间</a>
@@ -31,3 +40,6 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    checkUser();
+</script>
