@@ -4,6 +4,14 @@
             <div class="12u">
                 <header id="header">
                     <div class="login">
+                        {dede:php}
+                        $array = array(
+                            'test'=>'test'
+                        );
+                        //未登录显示的head
+                        print_r($array);
+                        if(!$cfg_ml->IsLogin()) {
+                        {/dede:php}
                         <div id="_userlogin">
                             <div class="userlogin">
                                 <form name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
@@ -27,12 +35,24 @@
                                     }
                                     {/dede:php}-->
                                     <div class="submit">
-                                    <!--<button type="submit" class="btn-1">登录</button>-->
-                                    <a href="{dede:global.cfg_memberurl/}/index.php" >登录</a>
-                                    <a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew" >注册帐号</a> <a href="{dede:global.cfg_memberurl/}/resetpassword.php">忘记密码?</a> </div>
+                                        <!--<button type="submit" class="btn-1">登录</button>-->
+                                        <a href="{dede:global.cfg_memberurl/}/login.php" >登录</a>
+                                        <a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew">注册帐号</a>
+                                        <a href="{dede:global.cfg_memberurl/}/resetpassword.php">忘记密码?</a>
+                                    </div>
                                 </form>
                             </div>
                         </div>
+                        {dede:php}
+                        }
+                        //登录后显示的head
+                        else {
+                        {/dede:php}
+                        您好，<a href="{dede:global.cfg_memberurl/}/index.php" target="_blank">{dede:php} echo $cfg_ml->M_UserName;{/dede:php}</a>
+                        <a href="../member/index_do.php?fmdo=login&dopost=exit#">[退出]</a>
+                        {dede:php}
+                        }
+                        {/dede:php}
                         <a href="http://bbs.zhongguohaogongsi.com" target="_blank">论坛</a>
                         <a href="http://sns.zhongguohaogongsi.com" target="_blank">个人空间</a>
                         <a href="http://www.zhongguohaogongsi.com">线上查询</a>
