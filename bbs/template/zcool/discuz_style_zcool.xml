@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Style]]></item>
-	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Version"><![CDATA[X3.1]]></item>
 	<item id="Time"><![CDATA[2013-07-26 08:42]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2013/)]]></item>
 	<item id="Data">
-		<item id="styleid"><![CDATA[2]]></item>
-		<item id="name"><![CDATA[iscwo_design_2013]]></item>
+		<item id="styleid"><![CDATA[3]]></item>
+		<item id="name"><![CDATA[zcool]]></item>
 		<item id="available"><![CDATA[1]]></item>
-		<item id="templateid"><![CDATA[2]]></item>
+		<item id="templateid"><![CDATA[3]]></item>
 		<item id="extstyle"><![CDATA[|]]></item>
 		<item id="tplname"><![CDATA[设计作品图片模板]]></item>
-		<item id="directory"><![CDATA[./template/iscwo_design_2013]]></item>
-		<item id="copyright"><![CDATA[QQ:474902417]]></item>
+		<item id="directory"><![CDATA[./template/zcool]]></item>
+		<item id="copyright"><![CDATA[烙馍网]]></item>
 		<item id="style">
 			<item id="fontsize"><![CDATA[12px/1.5]]></item>
 			<item id="smfont"><![CDATA['Microsoft YaHei',sans-serif]]></item>
@@ -60,6 +59,6 @@
 			<item id="inputborder"><![CDATA[#E0E0E0]]></item>
 			<item id="contentwidth"><![CDATA[630px]]></item>
 		</item>
-		<item id="version"><![CDATA[X3]]></item>
+		<item id="version"><![CDATA[X3.1]]></item>
 	</item>
 </root>
