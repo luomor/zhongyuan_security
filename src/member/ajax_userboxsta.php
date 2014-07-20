@@ -24,9 +24,9 @@ $facepic = empty($face)? $cfg_ml->fields['face'] : $GLOBALS['cfg_memberurl'].'/t
 <a href="<?php echo $cfg_memberurl; ?>/index_do.php?fmdo=login&dopost=exit#">[退出]</a>-->
 
 您好，<a href="<?php echo $cfg_memberurl; ?>/index.php" target="_blank"><?php echo $cfg_ml->M_UserName; ?></a>
-<div class="userface">
-    <a href="<?php echo $cfg_memberurl; ?>/index.php"><img src="<?php echo $facepic;?>" width="20" height="20" /></a>
-</div>
+<!--<a href="<?php echo $cfg_memberurl; ?>/index.php">
+    <img src="<?php echo $facepic;?>" width="20" height="20" />
+</a>-->
 <span class="s">|</span>
 <a href="<?php echo $cfg_memberurl; ?>/index_do.php?fmdo=login&dopost=exit#">[退出]</a>
 <span class="s">|</span>
