@@ -4,14 +4,6 @@
             <div class="12u">
                 <header id="header">
                     <div class="login">
-                        {dede:php}
-                        $array = array(
-                            'test'=>'test'
-                        );
-                        //未登录显示的head
-                        print_r($array);
-                        if(!$cfg_ml->IsLogin()) {
-                        {/dede:php}
                         <div id="_userlogin">
                             <div class="userlogin">
                                 <form name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
@@ -43,16 +35,8 @@
                                 </form>
                             </div>
                         </div>
-                        {dede:php}
-                        }
-                        //登录后显示的head
-                        else {
-                        {/dede:php}
-                        您好，<a href="{dede:global.cfg_memberurl/}/index.php" target="_blank">{dede:php} echo $cfg_ml->M_UserName;{/dede:php}</a>
+                        您好，<a href="{dede:global.cfg_memberurl/}/index.php" target="_blank"></a>
                         <a href="../member/index_do.php?fmdo=login&dopost=exit#">[退出]</a>
-                        {dede:php}
-                        }
-                        {/dede:php}
                         <a href="http://bbs.zhongguohaogongsi.com" target="_blank">论坛</a>
                         <a href="http://sns.zhongguohaogongsi.com" target="_blank">个人空间</a>
                         <a href="http://www.zhongguohaogongsi.com">线上查询</a>
