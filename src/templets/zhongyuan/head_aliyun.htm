@@ -1,0 +1,45 @@
+<script type="text/javascript">
+    function checkUser() {
+        var taget_obj = document.getElementById('_userlogin');
+        myajax = new DedeAjax(taget_obj, false, false, "", "", "");
+        myajax.SendGet2("{dede:global name="cfg_memberurl"/}/ajax_userboxsta.php");
+        DedeXHTTP = null;
+    }
+</script>
+<div class="tc-page-head J_pageHead">
+    <div class="inner fix">
+        <h1 class="logo lf fix">
+            <a href="/">
+                <img class="main lf" src="{dede:global.cfg_templets_skin/}/images/logo.png" alt="中国好公司">
+            </a>
+        </h1>
+        <div class="info rf">
+            <p class="user">
+                <span id="_userlogin">
+                    <a href="{dede:global.cfg_memberurl/}/login.php" >登录</a>
+                    <span class="s">|</span>
+                    <a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew">注册帐号</a>
+                    <span class="s">|</span>
+                    <a href="{dede:global.cfg_memberurl/}/resetpassword.php">忘记密码?</a>
+                    <span class="s">|</span>
+                </span>
+                <a href="http://bbs.zhongguohaogongsi.com" target="_blank">论坛</a>
+                <span class="s">|</span>
+                <a href="http://sns.zhongguohaogongsi.com" target="_blank">个人空间</a>
+                <span class="s">|</span>
+                <a href="http://www.zhongguohaogongsi.com">线上查询</a>
+                <span class="s">|</span>
+                <a href="http://www.zhongguohaogongsi.com">联系我们</a>
+            </p>
+            <p class="nav">
+                {dede:channel type='top' row='10' currentstyle="<a href='~typelink~' class='current-page-item' ~rel~>~typename~</a>"}
+                <a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a>
+                <span class="s"></span>
+                {/dede:channel}
+            </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    checkUser();
+</script>
