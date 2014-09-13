@@ -294,3 +294,6 @@ CREATE TABLE `zhongyuan_arctype` (
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 alter table zhongyuan_security.zhongyuan_arctype change column `typedir` `typedir` char(255) NOT NULL DEFAULT '';
+
+select * from zhongyuan_bbs.zhongyuan_common_setting where skey like 'image%';
+select * from zhongyuan_bbs.zhongyuan_common_setting where skey like 'js%';
