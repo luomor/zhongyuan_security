@@ -115,7 +115,7 @@ $videolist = $arc->addTableRow['videolist'];
 
 	$vurl = $video[1];//当前视频URL
 	$vname = $arc->Fields['title'].'-'.$video[0];//当前视频名称
-include_once(DEDETEMPLATE.'/plus/play.htm'); 
+include_once(DEDETEMPLATE.'/plus/play.htm');
 
 
 
