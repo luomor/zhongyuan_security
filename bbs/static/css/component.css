@@ -9,7 +9,7 @@
 	display: block;
 	float: left;
 	padding: 7px;
-	width: 33%;
+	width: 25%;
 	opacity: 0;
 }
 
@@ -19,8 +19,7 @@
 	opacity: 1;
 }
 
-.grid li a,
-.grid li img {
+.grid li div {
 	outline: none;
 	border: none;
 	display: block;
@@ -220,4 +219,102 @@
 	.grid li {
 		width: 100%;
 	}
+}
+
+.wfc {
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+}
+
+.pin {
+    width: 98%;
+    font-size: 12px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+.pin a.img.loaded {
+    background: #fff;
+}
+
+.pin a.img {
+    background-color: #faf7f7;
+}
+
+.pin a.img, .Board a.img {
+    position: relative;
+}
+
+a.img {
+    display: block;
+    background-color: #fff;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: 0;
+}
+
+.pin a.img img {
+    position: relative;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+a.img img {
+    display: block;
+    margin: 0 auto;
+}
+
+.pin a.img .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pin .description {
+    display: block;
+    padding: 0 16px;
+    margin: 10px 0;
+    line-height: 1.35em;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.pin .stats>span {
+    display: inline-block;
+    width: auto;
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.less {
+    color: #8c7e7e;
+}
+
+.pin .stats {
+    padding: 0 15px;
+    margin: 10px 0;
+}
+
+.pin .stats .like i {
+    background-position: 0 0;
+}
+
+.pin .stats>span i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    vertical-align: bottom;
+    background: url(../image/common/bt_action_icons.svg) 0 0 no-repeat;
 }
