@@ -62,7 +62,7 @@ if($dopost!='save')
 	
 	$channelid = $arcRow['channel'];
 	$tags = GetTags($aid);
-	include DedeInclude("templets/video_edit.htm");
+	include DedeInclude("templets/video_edit_multi.htm");
 	exit();
 }
 /*--------------------------------
