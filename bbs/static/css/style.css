@@ -6,12 +6,12 @@ mark, rp, rt, ruby, summary, time {display:inline }
 .right {float:right}
 .wrapper {width:100%;overflow:hidden}
 /* Global properties ======================================================== */
-body {background:url(../image/financer/bg.jpg) top center repeat;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#575652;line-height:22px}
+body {border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#575652;line-height:22px}
 .ic, .ic a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .css3 {border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 4px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 4px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, .4);position:relative}
 /* Global Structure ============================================================= */
 .main {margin:0 auto;width:940px}
-.body1 {background:url(../image/financer/bg_top.gif) top repeat-x}
+.body1 {}
 /* ============================= main layout ====================== */
 a {color:#575652;text-decoration:underline;outline:none}
 a:hover {text-decoration:none}
@@ -21,8 +21,8 @@ h2 span {font-weight:300}
 h2 strong, .box1 h2 strong {font-weight:700;display:inline-block;width:36px;color:#fff;text-align:center;background:url(../image/financer/bg_title1.gif) 0 4px repeat-x;margin-right:3px}
 h2.color2 strong {background-image:url(../image/financer/bg_title2.gif)}
 h2.color3 strong {background-image:url(../image/financer/bg_title3.gif)}
-h3 {font-size:35px;color:#dad6cc;font-weight:400;line-height:1.2em;padding:25px 0 0 35px;float:left;letter-spacing:-1px}
-h4 {color:#dad6cc;font-weight:300;font-size:35px;line-height:1.2em;padding:0 0 7px 0;letter-spacing:-1px}
+h3 {font-size:35px;color:#000000;font-weight:400;line-height:1.2em;padding:25px 0 0 35px;float:left;letter-spacing:-1px}
+h4 {color:#000000;font-weight:300;font-size:35px;line-height:1.2em;padding:0 0 7px 0;letter-spacing:-1px}
 h4 span {color:#ffc11e;font-weight:400}
 h4.color2 span {color:#9ecf39}
 h4.color3 span {color:#6cd6af}
@@ -31,10 +31,10 @@ p {padding-bottom:22px}
 strong {color:#dcd9cf}
 /* ============================= header ====================== */
 header {}
-#logo {display:block;background:url(../image/financer/logo.png) 0 0 no-repeat;width:146px;height:83px;text-indent:-9999px}
+#logo {display:block;background:url(../image/financer/logo.png) 0 0 no-repeat;background-size:146px;width:146px;height:83px;text-indent:-9999px}
 #menu {float:right;padding:28px 12px 20px 0}
 #menu li {float:left;padding-left:1px}
-#menu li a {display:block;padding:0 20px;height:42px;font-size:18px;color:#dad6cc;line-height:42px;text-transform:uppercase;text-decoration:none;font-weight:400}
+#menu li a {display:block;padding:0 20px;height:42px;font-size:18px;color:#000000;line-height:42px;text-transform:uppercase;text-decoration:none;font-weight:400}
 #menu li a:hover, #menu #menu_active a {background:url(../image/financer/menu_active.gif) top repeat-x;color:#fff}
 #top_nav {float:right;padding:40px 37px 0 575px}
 #top_nav li {float:left;padding:4px 26px 5px 0;margin-right:25px;background:url(../image/financer/top_line.png) right 0 no-repeat}
@@ -55,9 +55,9 @@ header {}
 #banner3 a {background:url(../image/financer/banner3_active.png) -250px 0 no-repeat}
 .pagination #banner1:hover, .pagination #banner1.current, .pagination #banner2:hover, .pagination #banner2.current, .pagination #banner3:hover, .pagination #banner3.current {}
 .banner {position:absolute;z-index:2;right:0;bottom:0;margin:0 10px 10px 0}
-.banner span {float:right;padding:0 32px;margin-bottom:5px;background:#000;font-size:40px;line-height:56px;height:56px;font-weight:400;color:#dad6cc;line-height:1.2em}
+.banner span {float:right;padding:0 32px;margin-bottom:5px;background:#000;font-size:40px;line-height:56px;height:56px;font-weight:400;color:#000000;line-height:1.2em}
 .banner em {font-style:normal;text-transform:uppercase}
-.banner strong {float:right;padding:0 32px;background:#000;font-size:40px;line-height:56px;font-weight:300;color:#dad6cc}
+.banner strong {float:right;padding:0 32px;background:#000;font-size:40px;line-height:56px;font-weight:300;color:#000000}
 /* ============================= content ====================== */
 #content {}
 .pad_left1 {padding-left:26px}
@@ -65,10 +65,10 @@ header {}
 .pad_bot1 {padding-bottom:14px}
 .pad_bot2 {padding-bottom:4px}
 .marg_right1 {margin-right:37px}
-.box1 {background:url(../image/financer/bg_box1.jpg) top center no-repeat #dad6cc;border-top:5px solid #cdc8bc;padding:15px 30px 29px}
+.box1 {background:url(../image/financer/bg_box1.jpg) top center no-repeat #000000;border-top:5px solid #cdc8bc;padding:15px 30px 29px}
 .box1 strong {color:#3f3f3f}
 .box1 figure {box-shadow:0 0 3px #a4a19a;-moz-box-shadow:0 0 3px #a4a19a;-webkit-box-shadow:0 0 3px #a4a19a;position:relative}
-.box2 {background:#0e0c0a;padding:25px 30px 32px}
+.box2 {padding:25px 30px 32px}
 .box2 .line1, .box2 .line2 {background-image:url(../image/financer/line_vert2.gif)}
 #page4 .box2 {margin-top:7px;padding-top:30px;padding-bottom:28px}
 .line1 {background:url(../image/financer/line_vert1.gif) 289px 0 repeat-y}
@@ -109,7 +109,7 @@ header {}
 .address {float:left;width:80px}
 .img1 {position:absolute;right:0;top:32px}
 /* ============================= footer ====================== */
-footer {background:#000;padding:21px 36px 44px}
+footer {padding:21px 36px 44px}
 #footer_logo {float:left;font-size:46px;font-weight:300;text-transform:uppercase;color:#dedbd2;line-height:1.2em;text-decoration:none;letter-spacing:-3px;margin-left:-4px}
 #footer_logo span {color:#ffc11e}
 #icons {float:right;padding:20px 0 0 0}
@@ -122,7 +122,7 @@ footer {background:#000;padding:21px 36px 44px}
 footer nav {float:left}
 #footer_menu {float:left;padding:15px 0 18px 0;margin-left:-1px}
 #footer_menu li {float:left;padding-right:29px;background:url(../image/financer/menu_line.gif) right 0 no-repeat;margin-right:29px}
-#footer_menu li a {display:block;color:#fff;text-decoration:none;line-height:20px}
+#footer_menu li a {display:block;text-decoration:none;line-height:20px}
 #footer_menu li a:hover, #footer_menu .active a {color:#575652}
 #footer_menu .end {background:none;padding-right:0;padding-left:0}
 #footer_text {padding-top:18px;border-top:1px solid #0d0d0d;text-align:center}
