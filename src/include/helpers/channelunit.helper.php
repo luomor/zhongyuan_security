@@ -488,9 +488,6 @@ function FillAttsDefault(&$atts, $attlist)
  */
 function MakeOneTag(&$dtp, &$refObj, $parfield='Y')
 {
-    global $cfg_disable_tags;
-    $cfg_disable_tags = isset($cfg_disable_tags)? $cfg_disable_tags : 'php';
-    $disable_tags = explode(',', $cfg_disable_tags);
     $alltags = array();
     $dtp->setRefObj($refObj);
     //读取自由调用tag列表
@@ -544,22 +541,10 @@ function MakeOneTag(&$dtp, &$refObj, $parfield='Y')
         }
         if(in_array($tagname,$alltags))
         {
-            if(in_array($tagname, $disable_tags))
-            {
-                if(DEBUG_LEVEL) echo 'DedeCMS Error:Tag disabled:"'.$tagname.'" <a href="http://help.dedecms.com/install-use/apply/2013/0711/2324.html" target="_blank">more...</a>!';
-                continue;
-            }
-            if (DEBUG_LEVEL==TRUE) {
-                $ttt1 = ExecTime();
-            }
             $filename = DEDEINC.'/taglib/'.$tagname.'.lib.php';
             include_once($filename);
             $funcname = 'lib_'.$tagname;
             $dtp->Assign($tagid,$funcname($ctag,$refObj));
-            if (DEBUG_LEVEL==TRUE) {
-                $queryTime = ExecTime() - $ttt1;
-                echo '标签：'.$tagname.'载入花费时间：'.$queryTime."<br />\r\n";
-            }
         }
     }
 }
@@ -778,4 +763,38 @@ function WriteCacheBlock($cacheid, $str)
     $fp = fopen($cachefile, 'w');
     $str = fwrite($fp, $str);
     fclose($fp);
+}
+/**
+*	视频播放列表
+*/
+function palyList($viedolist)
+{
+	//return $viedolist;
+	//exit();
+	global $cfg_phpurl,$aid,$arcID,$id;
+	if(empty($aid)){
+		$vid = (empty($id)) ? $arcID : $id;
+	} else { 
+		$vid = $aid;
+	}
+
+		
+	if(empty($viedolist)) {
+		return '播放列表为空！！！';	
+		exit();
+	}
+	$list = explode('{li}',$viedolist);
+	//print_r($list);
+	//exit();
+	$palylist = '';
+	for($i=0;$i<count($list);$i++){
+		$video = explode('{span}',$list[$i]);
+		if(empty($video[0])) continue ;
+		if(empty($video[1])) continue ;
+		$play = $i+1;
+		//$url = $video[1];
+		$palylist .="<a href=\"{$cfg_phpurl}/play.php?aid={$vid}&play={$play}\" target=\"_blank\">{$video[0]}</a>";
+		}
+		unset($vid);
+		return $palylist;
 }
