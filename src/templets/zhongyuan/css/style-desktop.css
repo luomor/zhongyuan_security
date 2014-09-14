@@ -950,3 +950,13 @@ a {
     color: #888;
     border: 1px solid #eee;
 }
+
+.videolist {
+    margin: 20px;
+}
+
+.videolist a {
+    border: black solid 1px;
+    margin: 10px;
+    padding: 10px;
+}

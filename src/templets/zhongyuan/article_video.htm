@@ -1,254 +1,130 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
-<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field.keywords/}" />
-<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
-<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/dedecms_skins_0.css" type="text/css" id="cssfile" />
-<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
-<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.cookie.js"></script>
-<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/changeSkin.js"></script>
-<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
-<script language="javascript" type="text/javascript">
+<!DOCTYPE HTML>
 <!--
-function CheckLogin()
-{
-	var taget_obj = document.getElementById('_ajax_feedback');
-	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
-	DedeXHTTP = null;
-}
-function postBadGood(ftype,fid)
-{
-	var taget_obj = document.getElementById(ftype+fid);
-	var saveid = GetCookie('badgoodid');
-	if(saveid != null)
-	{
-		var saveids = saveid.split(',');
-		var hasid = false;
-		saveid = '';
-		j = 1;
-		for(i=saveids.length-1;i>=0;i--)
-		{
-			if(saveids[i]==fid && hasid) continue;
-			else {
-				if(saveids[i]==fid && !hasid) hasid = true;
-				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
-				j++;
-				if(j==10 && hasid) break;
-				if(j==9 && !hasid) break;
-			}
-		}
-		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
-		else saveid += ','+fid;
-		SetCookie('badgoodid',saveid,1);
-	}
-	else
-	{
-		SetCookie('badgoodid',fid,1);
-	}
-	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("{dede:global name='cfg_phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
-	DedeXHTTP = null;
-}
-function postDigg(ftype,aid)
-{
-	var taget_obj = document.getElementById('newdigg');
-	var saveid = GetCookie('diggid');
-	if(saveid != null)
-	{
-		var saveids = saveid.split(',');
-		var hasid = false;
-		saveid = '';
-		j = 1;
-		for(i=saveids.length-1;i>=0;i--)
-		{
-			if(saveids[i]==aid && hasid) continue;
-			else {
-				if(saveids[i]==aid && !hasid) hasid = true;
-				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
-				j++;
-				if(j==20 && hasid) break;
-				if(j==19 && !hasid) break;
-			}
-		}
-		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
-		else saveid += ','+aid;
-		SetCookie('diggid',saveid,1);
-	}
-	else
-	{
-		SetCookie('diggid',aid,1);
-	}
-	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
-	myajax.SendGet2(url);
-	DedeXHTTP = null;
-}
-function getDigg(aid)
-{
-	var taget_obj = document.getElementById('newdigg');
-	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
-	DedeXHTTP = null;
-}
-function check(){
-		if(document.formsearch.searchtype.value=="")
-		document.formsearch.action="http://www.google.cn/custom"
-		else
-		document.formsearch.action="{dede:field name='phpurl'/}/search.php"
-	} 
+	Minimaxing 3.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-</script>
+<html>
+<head>
+    <title>{dede:global.cfg_webname/}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <!--<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">-->
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/config.js"></script>
+    <script type="text/javascript">
+        var path = "{dede:global.cfg_templets_skin/}/";
+    </script>
+    <script src="{dede:global.cfg_templets_skin/}/js/skel.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/skel-panels.min.js"></script>
+
+    <noscript>
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/skel-noscript.css" />
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css" />
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style-desktop.css" />
+    </noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="{dede:global.cfg_templets_skin/}/js/html5shiv.js"></script><![endif]-->
 </head>
-<body class="downlist">
-{dede:include filename="head.htm"/}
-<!-- /header -->
-
-<div class="w960 center clear mt1">
-	<div class="pleft">
-		<div class="place">
-			<strong>当前位置:</strong> {dede:field name='position'/}
-		</div><!-- /place -->
-		<div class="viewbox">
-			<div class="title">
-				<h2>{dede:field.title /}</h2>
-			</div><!-- /title -->
-			<div class="infolist"><small>作者：</small><span>{dede:field.writer/}</span> <small>来源：</small><span>{dede:field.source/} </span> <small>发布时间：</small><span>{dede:field.pubdate function=&quot;GetDateMk('@me')&quot;/}</span> <small>浏览：</small><span>
-			  <script src="{dede:field.phpurl/}/disdls.php?aid={dede:field.id/}" language="javascript"></script></span>
-		  </div><!-- /info -->
-			<div class="picview">
-				{dede:field name='image'/}
-			</div><!-- /info -->
-			<div class="labeltitle">
-				<strong>视频介绍</strong>
-			</div>
-			<div class="content">
-				{dede:field.plot /}
-			</div>
-			<div class="labeltitle">
-				<strong>视频地址</strong>
-			</div>
-			<div class="content">
-				<div class="videolist">
-                	{dede:field name='videolist' function="palyList(@me)"/}
-                </div>
-			</div>
-			<div class="labeltitle"></div>
-			<div class="newdigg" id="newdigg">
-				<div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',{dede:field.id/})">
-					<div class="digg_act">顶一下</div>
-					<div class="digg_num">({dede:field.goodpost/})</div>
-					<div class="digg_percent">
-						<div class="digg_percent_bar"><span style="width:{dede:field.goodper/}%"></span></div>
-						<div class="digg_percent_num">{dede:field.goodper/}%</div>
-					</div>
-				</div>
-				<div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',{dede:field.id/})">
-					<div class="digg_act">踩一下</div>
-					<div class="digg_num">({dede:field.badpost/})</div>
-					<div class="digg_percent">
-						<div class="digg_percent_bar"><span style="width:{dede:field.badper/}%"></span></div>
-						<div class="digg_percent_num">{dede:field.badper/}%</div>
-					</div>
-				</div>
-			</div>
-			 <script language="javascript" type="text/javascript">getDigg({dede:field.id/});</script>
-			<div class="boxoff">
-				<strong>------分隔线----------------------------</strong>
-			</div>
-			<div class="handle">
-				<div class="context">
-					<ul>
-						<li>{dede:prenext get='pre'/}</li>
-						<li>{dede:prenext get='next'/}</li>
-					</ul>
-				</div><!-- /context -->
-				<div class="actbox">
-					<ul>
-						<li id="act-fav"><a href="{dede:global name='cfg_phpurl'/}/stow.php?aid={dede:field.id/}" target="_blank">收藏</a></li>
-						<li id="act-err"><a href="{dede:global name='cfg_phpurl'/}/erraddsave.php?aid={dede:field.id/}&title={dede:field.title/}" target="_blank">挑错</a></li>
-						<li id="act-pus"><a href="{dede:global name='cfg_phpurl'/}/recommend.php?aid={dede:field.id/}" target="_blank">推荐</a></li>
-						<li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
-					</ul>
-				</div><!-- /actbox -->
-			</div><!-- /handle -->
-		</div><!-- /viewbox -->
-
-<!-- //AJAX评论区 -->
-{dede:include file='ajaxfeedback.htm' /}
-	
-	</div><!-- /pleft -->
-
-	<div class="pright">
-        <div>
-          <dl class="tbox">
-				<dt><strong>栏目列表</strong></dt>
-				<dd>
-					<ul class="d6">
-                      {dede:channel type='son' currentstyle="<li><a href='DedeCmsV5.6-GBK-Final/uploads/templets/default/~typelink~' class='thisclass'>~typename~</a></li>"}
-		<li><a href='[field:typeurl/]'>[field:typename/]</a></li>{/dede:channel}
-					</ul>
-				</dd>
-			</dl>
+<body>
+<!-- ********************************************************* -->
+{dede:include filename="head.htm" /}
+<div id="main">
+    <div class="container">
+        <div class="row main-row">
+            <div class="12u">
+                <section>
+                    <div class="viewbox">
+                        <div class="picview">
+                            {dede:field name='image'/}
+                        </div><!-- /info -->
+                        <div class="labeltitle">
+                            <strong>视频介绍</strong>
+                        </div>
+                        <div class="content">
+                            {dede:field.plot /}
+                        </div>
+                        <div class="labeltitle">
+                            <strong>视频地址</strong>
+                        </div>
+                        <div class="content">
+                            <div class="videolist">
+                                {dede:field name='videolist' function="palyList(@me)"/}
+                            </div>
+                        </div>
+                        <!-- /pages -->
+                        {dede:bshare/}
+                    </div>
+                </section>
+            </div>
         </div>
-        	<div class="infos_userinfo">
- 			{dede:memberinfos}
-			<dl class="tbox">
-				<dt><strong>发布者资料</strong></dt>
-				<dd>
-					<a href="[field:spaceurl /]" class="userface"><img src="[field:face/]" width="52" height="52" /></a>
-					<a href='[field:spaceurl /]' class="username">[field:uname/]</a>
-					<span class="useract">
-						<a href="[field:spaceurl /]" class="useract-vi">查看详细资料</a>
-                        <a href="[field:spaceurl /]&action=guestbook" class="useract-pm">发送留言</a>
-						<a href="[field:spaceurl /]&action=newfriend" class="useract-af">加为好友</a>
-					</span>
-					<span class="userinfo-sp"><small>用户等级:</small>[field:rankname /]</span>
-					<span class="userinfo-sp"><small>注册时间:</small>[field:jointime function="MyDate('Y-m-d H:m',@me)"/]</span>
-					<span class="userinfo-sp"><small>最后登录:</small>[field:logintime function="MyDate('Y-m-d H:m',@me)"/]</span>
-				</dd>
-			</dl>
-			{/dede:memberinfos}
-   	 	</div>
-
-		<div class="downrange mt1">
-			<dl class="tbox">
-				<dt><strong>推荐视频</strong></dt>
-				<dd>
-					<ul class="f1">
-                    {dede:arclist flag='c' titlelen=42 row=8}
-						<li>
-							<a href="[field:arcurl/]">[field:title/]</a>
-							<span><small>好评:</small>[field:scores/]</span>
-							<span><small>人气:</small>[field:click/]</span>
-						</li>
-                    {/dede:arclist}
-					</ul>
-				</dd>
-			</dl>
-		</div><!-- /downrange -->
-
-		<div class="hot mt1">
-			<dl class="tbox">
-				<dt><strong>热门视频</strong></dt>
-				<dd>
-					<ul class="c1 ico2">
-                    {dede:arclist row=10 orderby=click}
-                    	<li><a href="[field:arcurl/]">[field:title/]</a></li>
-                    {/dede:arclist}
-					</ul>
-				</dd>
-			</dl>
-		</div>
-
-	</div><!-- /pright -->
+    </div>
 </div>
+<div id="footer-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="8u">
+                <section>
+                    <h2>欢迎来到中国好公司</h2>
+                    <div>
+                        <div class="row">
+                            <div class="3u">
+                                <ul class="link-list">
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                </ul>
+                            </div>
+                            <div class="3u">
+                                <ul class="link-list">
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                </ul>
+                            </div>
+                            <div class="3u">
+                                <ul class="link-list">
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                </ul>
+                            </div>
+                            <div class="3u">
+                                <ul class="link-list">
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                    <li><a href="#">欢迎来到中国好公司</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="4u">
+                <section>
+                    <h2>欢迎来到中国好公司</h2>
+                    <p>欢迎来到中国好公司</p>
+                    <footer class="controls">
+                        <a href="#" class="button">欢迎来到中国好公司</a>
+                    </footer>
+                </section>
 
-{dede:include filename="footer.htm"/}
-<!-- /footer -->
-<script src="{dede:global name='cfg_phpurl'/}/count.php?aid={dede:field name='id'/}&mid={dede:field name='mid'/}" language="javascript"></script>
+            </div>
+        </div>
+        {dede:include filename="footer.htm"/}
+    </div>
+</div>
+<!-- ********************************************************* -->
 </body>
 </html>
