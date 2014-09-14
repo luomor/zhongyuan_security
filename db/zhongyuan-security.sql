@@ -297,3 +297,7 @@ alter table zhongyuan_security.zhongyuan_arctype change column `typedir` `typedi
 
 select * from zhongyuan_bbs.zhongyuan_common_setting where skey like 'image%';
 select * from zhongyuan_bbs.zhongyuan_common_setting where skey like 'js%';
+
+select * from zhongyuan_security.zhongyuan_addonvideo;
+
+SELECT arc.id,arc.typeid,ch.maintable,ch.editcon FROM zhongyuan_security.`zhongyuan_arctiny` arc LEFT JOIN zhongyuan_security.`zhongyuan_arctype` tp ON tp.id=arc.typeid LEFT JOIN zhongyuan_security.`zhongyuan_channeltype` ch ON ch.id=arc.channel WHERE arc.id='2';

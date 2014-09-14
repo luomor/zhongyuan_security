@@ -7,6 +7,7 @@ if(empty($dopost))
 {
 	$dopost = '';
 }
+
 if($dopost!='save')
 {
 	require_once(DEDEADMIN."/inc/inc_catalog_options.php");
