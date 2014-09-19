@@ -129,9 +129,9 @@ sudo chmod -R 775 src
 sudo chmod -R 775 bbs
 sudo chmod -R 775 sns
 
-sudo chgrp -R didiwuliu src
-sudo chgrp -R didiwuliu bbs
-sudo chgrp -R didiwuliu sns
+sudo chgrp -R groupname src
+sudo chgrp -R groupname bbs
+sudo chgrp -R groupname sns
 </pre>
 
 <pre>
